@@ -32,6 +32,14 @@
         "image": "images/clean-code.jpg"
     },
     {
+        "collectionNumber": 7,
+        "title": "Swapnil",
+        "author": "Robert C. Martin",
+        "purchaseDate": "20 March 2025",
+        "purpose": "Programming Learning",
+        "image": "images/clean-code.jpg"
+    },
+    {
         "collectionNumber": 5,
         "title": "Rich Dad Poor Dad",
         "author": "Robert Kiyosaki",
