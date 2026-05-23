@@ -200,7 +200,7 @@ body {
 ========================================= */
 .books-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     gap: 35px;
     padding-bottom: 20px;
 }
@@ -463,7 +463,7 @@ body {
     .controls { gap: 15px; }
     .search-box input, .filter-box select { padding: 12px 20px 12px 45px; }
 
-    .books-grid { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 20px; }
+    .books-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 20px; }
     
     .book-cover-container img { height: 210px; }
     .shelf { height: 8px; width: 100%; top: -2px; }
