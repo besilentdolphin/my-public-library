@@ -20,6 +20,42 @@ const modalAuthor = document.getElementById("modalAuthor");
 const modalDate = document.getElementById("modalDate");
 const modalPurpose = document.getElementById("modalPurpose");
 
+
+/* =========================================
+   URL HISTORY MANAGEMENT (BACK BUTTON FIX)
+========================================= */
+// ব্রাউজারের লিংক থেকে বর্তমান পেইজ নাম্বার বের করা
+function getPageFromURL() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const page = parseInt(urlParams.get('page'));
+    return page ? page : 1;
+}
+
+// পেইজ বদলালে ব্রাউজারের লিংকে পেইজ নাম্বার যুক্ত করা
+function updateURL(page) {
+    const url = new URL(window.location);
+    url.searchParams.set('page', page);
+    window.history.pushState({ page: page }, '', url);
+}
+
+// ব্রাউজারের Back বা Forward বাটন চাপলে কী হবে
+window.addEventListener('popstate', (event) => {
+    // ১. যদি বইয়ের পপ-আপ (মডাল) ওপেন থাকে, তবে ব্যাক বাটন চাপলে শুধু পপ-আপটি বন্ধ হবে
+    if (modal.style.display === "flex") {
+        modal.style.display = "none";
+    }
+
+    // ২. পেইজ নাম্বার ঠিক করা
+    let newPage = event.state && event.state.page ? event.state.page : getPageFromURL();
+    
+    // ৩. যদি পেইজ নাম্বার আসলেই পরিবর্তন হয়, তবেই নতুন করে বইগুলো শো করাবে
+    if (newPage !== currentPage) {
+        currentPage = newPage;
+        displayBooks(currentFilteredBooks);
+    }
+});
+
+
 /* =========================================
    FETCH DATA FROM JSON
 ========================================= */
@@ -29,22 +65,27 @@ async function fetchBooks() {
         books = await response.json();
         currentFilteredBooks = books; 
         
-        // Update Total Enlisted Books Counter
         if (totalBooksCount) {
             totalBooksCount.textContent = books.length;
         }
 
+        currentPage = getPageFromURL(); 
+        
+        // প্রথমবার সাইটে ঢুকলে হিস্ট্রি সেট করা
+        window.history.replaceState({ page: currentPage }, '', window.location.href);
+        
         initApp(); 
     } catch (error) {
         console.error("Error loading books.json:", error);
         booksGrid.innerHTML = `
             <div style="grid-column: 1 / -1; text-align: center; padding: 40px; color: #ef4444;">
                 <h2>Error loading data!</h2>
-                <p>Please make sure you are running this on a Local Server (e.g., Live Server in VS Code).</p>
+                <p>Please make sure you are running this on a Local Server.</p>
             </div>
         `;
     }
 }
+
 
 /* =========================================
    DISPLAY BOOKS WITH PAGINATION
@@ -52,7 +93,6 @@ async function fetchBooks() {
 function displayBooks(bookArray) {
     booksGrid.innerHTML = "";
 
-    // 1. Handle Empty State
     if (bookArray.length === 0) {
         booksGrid.innerHTML = `
             <div style="grid-column: 1 / -1; text-align: center; padding: 60px 20px; background: rgba(30, 41, 59, 0.5); backdrop-filter: blur(10px); border-radius: 16px; border: 1px solid rgba(255,255,255,0.1);">
@@ -64,12 +104,10 @@ function displayBooks(bookArray) {
         return;
     }
 
-    // 2. Pagination Math 
     const startIndex = (currentPage - 1) * booksPerPage;
     const endIndex = startIndex + booksPerPage;
     const paginatedBooks = bookArray.slice(startIndex, endIndex);
 
-    // 3. Render Books
     paginatedBooks.forEach(book => {
         const { collectionNumber, title, author, image, purchaseDate, purpose } = book;
 
@@ -88,15 +126,16 @@ function displayBooks(bookArray) {
             </div>
         `;
 
-        // Modal Logic
+        // মডাল (পপ-আপ) ওপেন করার লজিক
         card.addEventListener("click", () => {
+            // পপ-আপ ওপেন করার সময় ব্রাউজারের হিস্ট্রিতে একটি ফেক স্টেট পাঠানো হচ্ছে
+            window.history.pushState({ page: currentPage, modal: true }, '', window.location.href);
+            
             modal.style.display = "flex";
             modalImage.src = image;
-            
             modalImage.onerror = function() {
                 this.src = 'https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=600&auto=format&fit=crop';
             };
-
             modalTitle.textContent = title;
             modalAuthor.textContent = `Author: ${author}`;
             modalDate.textContent = purchaseDate;
@@ -106,9 +145,9 @@ function displayBooks(bookArray) {
         booksGrid.appendChild(card);
     });
 
-    // 4. Render Pagination Buttons
     renderPagination(bookArray.length);
 }
+
 
 /* =========================================
    RENDER PAGINATION CONTROLS
@@ -126,6 +165,7 @@ function renderPagination(totalItems) {
     prevBtn.addEventListener("click", () => {
         if (currentPage > 1) {
             currentPage--;
+            updateURL(currentPage); 
             displayBooks(currentFilteredBooks);
             scrollToTop();
         }
@@ -140,6 +180,7 @@ function renderPagination(totalItems) {
         
         pageBtn.addEventListener("click", () => {
             currentPage = i;
+            updateURL(currentPage); 
             displayBooks(currentFilteredBooks);
             scrollToTop();
         });
@@ -154,6 +195,7 @@ function renderPagination(totalItems) {
     nextBtn.addEventListener("click", () => {
         if (currentPage < totalPages) {
             currentPage++;
+            updateURL(currentPage); 
             displayBooks(currentFilteredBooks);
             scrollToTop();
         }
@@ -161,7 +203,6 @@ function renderPagination(totalItems) {
     paginationContainer.appendChild(nextBtn);
 }
 
-// Scroll to top on page change
 function scrollToTop() {
     window.scrollTo({
         top: document.querySelector('.controls').offsetTop - 20,
@@ -169,24 +210,22 @@ function scrollToTop() {
     });
 }
 
+
 /* =========================================
-   LOAD AUTHORS & FILTERS (Updated with Book Count)
+   LOAD AUTHORS & FILTERS
 ========================================= */
 function loadAuthors() {
-    // 1. Calculate how many books each author has
     const authorCounts = {};
     books.forEach(book => {
         authorCounts[book.author] = (authorCounts[book.author] || 0) + 1;
     });
 
-    // 2. Get unique author names and sort them alphabetically
     const authors = Object.keys(authorCounts).sort();
 
-    // 3. Populate dropdown
     authors.forEach(author => {
         const option = document.createElement("option");
-        option.value = author; // Value remains exactly the author's name for filtering
-        option.textContent = `${author} (${authorCounts[author]})`; // Displays name + count
+        option.value = author;
+        option.textContent = `${author} (${authorCounts[author]})`;
         authorFilter.appendChild(option);
     });
 }
@@ -209,17 +248,19 @@ function filterBooks() {
     }
 
     currentPage = 1; 
+    updateURL(currentPage); 
     displayBooks(currentFilteredBooks);
 }
 
-/* =========================================
-   EVENT LISTENERS
-========================================= */
-authorFilter.addEventListener("change", filterBooks);
-searchInput.addEventListener("input", filterBooks);
 
+/* =========================================
+   MODAL (POP-UP) CLOSE EVENT LISTENERS
+========================================= */
 const closeModal = () => {
-    modal.style.display = "none";
+    // যদি ম্যানুয়ালি X বাটনে বা বাইরে ক্লিক করে বন্ধ করা হয়, তবে ব্রাউজারকে ব্যাক করতে বলা হচ্ছে
+    if (modal.style.display === "flex") {
+        window.history.back(); 
+    }
 };
 
 closeBtn.addEventListener("click", closeModal);
@@ -235,6 +276,9 @@ document.addEventListener("keydown", (e) => {
         closeModal();
     }
 });
+authorFilter.addEventListener("change", filterBooks);
+searchInput.addEventListener("input", filterBooks);
+
 
 /* =========================================
    INITIALIZE APP
@@ -244,5 +288,5 @@ function initApp() {
     loadAuthors();
 }
 
-// Start
+// Start Application
 fetchBooks();
