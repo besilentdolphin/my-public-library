@@ -1,47 +1,8 @@
 /* =========================================
-   JSON BOOK DATABASE
+   STATE & DOM ELEMENTS
 ========================================= */
-const books = [
-    {
-        title: "Atomic Habits",
-        author: "James Clear",
-        purchaseDate: "12 January 2025",
-        purpose: "Habit Building & Self Improvement",
-        image: "images/atomic-habits.jpg"
-    },
-    {
-        title: "The Alchemist",
-        author: "Paulo Coelho",
-        purchaseDate: "8 February 2025",
-        purpose: "Motivation & Story Reading",
-        image: "images/alchemist.jpg"
-    },
-    {
-        title: "Deep Work",
-        author: "Cal Newport",
-        purchaseDate: "15 March 2025",
-        purpose: "Focus & Productivity",
-        image: "images/deep-work.jpg"
-    },
-    {
-        title: "Clean Code",
-        author: "Robert C. Martin",
-        purchaseDate: "20 March 2025",
-        purpose: "Programming Learning",
-        image: "images/clean-code.jpg"
-    },
-    {
-        title: "Rich Dad Poor Dad",
-        author: "Robert Kiyosaki",
-        purchaseDate: "10 April 2025",
-        purpose: "Financial Knowledge",
-        image: "images/rich-dad.jpg"
-    }
-];
+let books = []; // We will load the data into this array from JSON
 
-/* =========================================
-   DOM ELEMENTS
-========================================= */
 const booksGrid = document.getElementById("booksGrid");
 const authorFilter = document.getElementById("authorFilter");
 const searchInput = document.getElementById("searchInput");
@@ -56,12 +17,30 @@ const modalDate = document.getElementById("modalDate");
 const modalPurpose = document.getElementById("modalPurpose");
 
 /* =========================================
+   FETCH DATA FROM JSON
+========================================= */
+async function fetchBooks() {
+    try {
+        const response = await fetch("books.json");
+        books = await response.json();
+        initApp(); // Initialize after data is loaded
+    } catch (error) {
+        console.error("Error loading books.json:", error);
+        booksGrid.innerHTML = `
+            <div style="grid-column: 1 / -1; text-align: center; padding: 40px; color: #ef4444;">
+                <h2>Error loading data!</h2>
+                <p>Please make sure you are running this on a Local Server (like VS Code Live Server).</p>
+            </div>
+        `;
+    }
+}
+
+/* =========================================
    DISPLAY BOOKS
 ========================================= */
 function displayBooks(bookArray) {
     booksGrid.innerHTML = "";
 
-    // Beautiful Empty State (Matches Dark Glassmorphism Theme)
     if (bookArray.length === 0) {
         booksGrid.innerHTML = `
             <div style="grid-column: 1 / -1; text-align: center; padding: 60px 20px; background: rgba(30, 41, 59, 0.5); backdrop-filter: blur(10px); border-radius: 16px; border: 1px solid rgba(255,255,255,0.1);">
@@ -72,16 +51,14 @@ function displayBooks(bookArray) {
         return;
     }
 
-    // Render Books
     bookArray.forEach(book => {
-        // Destructuring for cleaner code
-        const { title, author, image, purchaseDate, purpose } = book;
+        const { collectionNumber, title, author, image, purchaseDate, purpose } = book;
 
         const card = document.createElement("div");
         card.classList.add("book-card");
 
-        // Added onerror fallback image in case local image is missing
         card.innerHTML = `
+            <div class="collection-badge">#${collectionNumber}</div>
             <img src="${image}" alt="${title}" onerror="this.src='https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=600&auto=format&fit=crop';">
             <div class="book-info">
                 <h3>${title}</h3>
@@ -89,12 +66,10 @@ function displayBooks(bookArray) {
             </div>
         `;
 
-        /* Modal Open Event */
         card.addEventListener("click", () => {
             modal.style.display = "flex";
             modalImage.src = image;
             
-            // Re-apply fallback for modal image as well
             modalImage.onerror = function() {
                 this.src = 'https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=600&auto=format&fit=crop';
             };
@@ -110,12 +85,10 @@ function displayBooks(bookArray) {
 }
 
 /* =========================================
-   LOAD AUTHORS INTO DROPDOWN
+   LOAD AUTHORS & FILTERS
 ========================================= */
 function loadAuthors() {
-    // Get unique authors using Set
     const authors = [...new Set(books.map(book => book.author))];
-
     authors.forEach(author => {
         const option = document.createElement("option");
         option.value = author;
@@ -124,25 +97,20 @@ function loadAuthors() {
     });
 }
 
-/* =========================================
-   FILTER & SEARCH LOGIC
-========================================= */
 function filterBooks() {
     const selectedAuthor = authorFilter.value;
     const searchText = searchInput.value.toLowerCase().trim();
 
     let filteredBooks = books;
 
-    /* Filter by Author */
     if (selectedAuthor !== "all") {
         filteredBooks = filteredBooks.filter(book => book.author === selectedAuthor);
     }
 
-    /* Filter by Search Keyword */
     if (searchText) {
         filteredBooks = filteredBooks.filter(book => 
             book.title.toLowerCase().includes(searchText) || 
-            book.author.toLowerCase().includes(searchText) // Added author search bonus!
+            book.author.toLowerCase().includes(searchText)
         );
     }
 
@@ -155,7 +123,6 @@ function filterBooks() {
 authorFilter.addEventListener("change", filterBooks);
 searchInput.addEventListener("input", filterBooks);
 
-/* Close Modal Logic */
 const closeModal = () => {
     modal.style.display = "none";
 };
@@ -168,7 +135,6 @@ window.addEventListener("click", (e) => {
     }
 });
 
-// Escape key to close modal (Pro feature)
 document.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && modal.style.display === "flex") {
         closeModal();
@@ -183,5 +149,5 @@ function initApp() {
     loadAuthors();
 }
 
-// Run app on load
-initApp();
+// Start the process
+fetchBooks();

@@ -328,3 +328,27 @@ body {
 
     .modal-details h2 { font-size: 1.8rem; }
 }
+/* =========================
+   COLLECTION NUMBER BADGE
+========================= */
+.book-card {
+    position: relative; /* Ensure this is set so the badge stays inside the card */
+}
+
+.collection-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: rgba(251, 191, 36, 0.95); /* Van Gogh Yellow */
+    color: #0f172a; /* Dark text for contrast */
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 6px 14px;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    z-index: 2; /* Keeps it above the image */
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}

@@ -1,0 +1,42 @@
+[
+    {
+        "collectionNumber": 1,
+        "title": "Atomic Habits",
+        "author": "James Clear",
+        "purchaseDate": "12 January 2025",
+        "purpose": "Habit Building & Self Improvement",
+        "image": "images/atomic-habits.jpg"
+    },
+    {
+        "collectionNumber": 2,
+        "title": "The Alchemist",
+        "author": "Paulo Coelho",
+        "purchaseDate": "8 February 2025",
+        "purpose": "Motivation & Story Reading",
+        "image": "images/alchemist.jpg"
+    },
+    {
+        "collectionNumber": 3,
+        "title": "Deep Work",
+        "author": "Cal Newport",
+        "purchaseDate": "15 March 2025",
+        "purpose": "Focus & Productivity",
+        "image": "images/deep-work.jpg"
+    },
+    {
+        "collectionNumber": 4,
+        "title": "Clean Code",
+        "author": "Robert C. Martin",
+        "purchaseDate": "20 March 2025",
+        "purpose": "Programming Learning",
+        "image": "images/clean-code.jpg"
+    },
+    {
+        "collectionNumber": 5,
+        "title": "Rich Dad Poor Dad",
+        "author": "Robert Kiyosaki",
+        "purchaseDate": "10 April 2025",
+        "purpose": "Financial Knowledge",
+        "image": "images/rich-dad.jpg"
+    }
+]
