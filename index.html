@@ -1,90 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>Raisa & Sara's Personal Collection</title>
 
+    <!-- Google Fonts: Playfair Display for headings, Poppins for body text -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
     <!-- Background Decoration -->
     <div class="bg-pattern"></div>
 
-    <!-- Header -->
-    <header class="header">
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1><i class="fa-solid fa-book-open-reader"></i> Raisa & Sara's Collection</h1>
+                <p><i class="fa-solid fa-location-dot"></i> Radhanagar, Pabna-6600</p>
+            </div>
+        </header>
 
-        <h1>📚 Raisa & Sara's Personal Collection</h1>
+        <!-- Controls -->
+        <section class="controls">
+            <!-- Search -->
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" id="searchInput" placeholder="Search by book name..." autocomplete="off">
+            </div>
 
-        <p>Radhanagar, Pabna-6600</p>
+            <!-- Filter -->
+            <div class="filter-box">
+                <i class="fa-solid fa-filter filter-icon"></i>
+                <select id="authorFilter">
+                    <option value="all">All Authors</option>
+                    <!-- Options will be populated by JS -->
+                </select>
+            </div>
+        </section>
 
-    </header>
+        <!-- Books Grid -->
+        <main class="books-grid" id="booksGrid">
+            <!-- Book cards will be generated here via JavaScript -->
+        </main>
 
-    <!-- Controls -->
-    <section class="controls">
-
-        <!-- Search -->
-        <div class="search-box">
-
-            <input type="text"
-                   id="searchInput"
-                   placeholder="Search by book name...">
-
+        <!-- Empty State (When no books match search) -->
+        <div id="noResults" class="no-results hidden">
+            <i class="fa-solid fa-book-skull"></i>
+            <p>No books found. Try a different search!</p>
         </div>
-
-        <!-- Filter -->
-        <div class="filter-box">
-
-            <select id="authorFilter">
-
-                <option value="all">All Authors</option>
-
-            </select>
-
-        </div>
-
-    </section>
-
-    <!-- Books Grid -->
-    <main class="books-grid" id="booksGrid"></main>
+    </div>
 
     <!-- Modal -->
     <div class="modal" id="bookModal">
-
         <div class="modal-content">
-
-            <span class="close-btn" id="closeBtn">&times;</span>
-
-            <img id="modalImage" src="" alt="Book Cover">
-
-            <div class="modal-details">
-
-                <h2 id="modalTitle"></h2>
-
-                <h3 id="modalAuthor"></h3>
-
-                <p>
-                    <strong>Purchase Date:</strong>
-                    <span id="modalDate"></span>
-                </p>
-
-                <p>
-                    <strong>Purpose:</strong>
-                    <span id="modalPurpose"></span>
-                </p>
-
+            <button class="close-btn" id="closeBtn" aria-label="Close modal">&times;</button>
+            <div class="modal-body">
+                <div class="modal-image-container">
+                    <img id="modalImage" src="" alt="Book Cover">
+                </div>
+                <div class="modal-details">
+                    <h2 id="modalTitle">Book Title</h2>
+                    <h3 id="modalAuthor"><i class="fa-solid fa-pen-nib"></i> Author Name</h3>
+                    <div class="info-group">
+                        <p><strong><i class="fa-solid fa-calendar-days"></i> Purchase Date:</strong> <span id="modalDate"></span></p>
+                        <p><strong><i class="fa-solid fa-bullseye"></i> Purpose:</strong> <span id="modalPurpose"></span></p>
+                    </div>
+                </div>
             </div>
-
         </div>
-
     </div>
 
     <script src="script.js"></script>
-
 </body>
-
 </html>
