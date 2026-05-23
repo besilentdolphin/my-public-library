@@ -57,15 +57,18 @@ function displayBooks(bookArray) {
         const card = document.createElement("div");
         card.classList.add("book-card");
 
+        // script.js এর displayBooks ফাংশনের ভেতরের card.innerHTML অংশটুকু এভাবে পরিবর্তন করুন:
+        
         card.innerHTML = `
-            <div class="collection-badge">#${collectionNumber}</div>
-            <img src="${image}" alt="${title}" onerror="this.src='https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=600&auto=format&fit=crop';">
+            <div class="book-cover-container">
+                <div class="collection-badge">#${collectionNumber}</div>
+                <img src="${image}" alt="${title}" onerror="this.src='https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=600&auto=format&fit=crop';">
+                <div class="shelf"></div> </div>
             <div class="book-info">
                 <h3>${title}</h3>
                 <p>${author}</p>
             </div>
         `;
-
         card.addEventListener("click", () => {
             modal.style.display = "flex";
             modalImage.src = image;

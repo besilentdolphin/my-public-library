@@ -1,7 +1,7 @@
-/* =========================
-   RESET & GOOGLE FONTS
-========================= */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap');
+/* =========================================
+   1. RESET & GOOGLE FONTS
+========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap');
 
 * {
     margin: 0;
@@ -18,30 +18,30 @@ body {
     position: relative;
 }
 
-/* =========================
-   VAN GOGH STARRY NIGHT THEME
-========================= */
+/* =========================================
+   2. VAN GOGH STARRY NIGHT BACKGROUND
+========================================= */
 .bg-pattern {
     position: fixed;
     inset: 0;
     /* Deep cool blue gradient overlay combined with Starry Night */
     background-image: 
-        linear-gradient(rgba(10, 25, 60, 0.4), rgba(10, 25, 60, 0.7)),
+        linear-gradient(rgba(10, 25, 60, 0.5), rgba(10, 25, 60, 0.8)),
         url("https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/1920px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     z-index: -1;
-    filter: contrast(1.1) saturate(1.2); /* Makes the colors more vibrant */
+    filter: contrast(1.1) saturate(1.2);
 }
 
-/* =========================
-   HEADER
-========================= */
+/* =========================================
+   3. HEADER SECTION
+========================================= */
 .header {
     text-align: center;
     padding: 50px 20px 30px;
-    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
 }
 
 .header h1 {
@@ -58,9 +58,9 @@ body {
     font-weight: 300;
 }
 
-/* =========================
-   CONTROLS (Search & Filter - Glassmorphism)
-========================= */
+/* =========================================
+   4. SEARCH & FILTER (GLASSMORPHISM)
+========================================= */
 .controls {
     width: 90%;
     max-width: 1000px;
@@ -86,7 +86,7 @@ body {
     transform: translateY(-50%);
     color: #94a3b8;
     font-size: 1.1rem;
-    pointer-events: none; 
+    pointer-events: none; /* Icon won't block clicks */
 }
 
 /* Glass effect for inputs */
@@ -120,7 +120,6 @@ body {
     box-shadow: 0 8px 25px rgba(251, 191, 36, 0.2);
 }
 
-/* Dropdown option background fix for dark theme */
 .filter-box select option {
     background: #0f172a;
     color: #fff;
@@ -137,9 +136,9 @@ body {
     pointer-events: none;
 }
 
-/* =========================
-   BOOK GRID
-========================= */
+/* =========================================
+   5. BOOK GRID
+========================================= */
 .books-grid {
     width: 90%;
     max-width: 1200px;
@@ -150,60 +149,118 @@ body {
     gap: 35px;
 }
 
-/* =========================
-   BOOK CARD (Dark Glassmorphism)
-========================= */
+/* =========================================
+   6. 3D BOOKSHELF & CARD DESIGN
+========================================= */
 .book-card {
-    background: rgba(30, 41, 59, 0.7);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-radius: 16px;
-    overflow: hidden;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    overflow: visible; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 15px;
     cursor: pointer;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.book-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
-    border-color: rgba(251, 191, 36, 0.4);
-}
-
-.book-card img {
+/* Container holding the book, badge, and shelf */
+.book-cover-container {
+    position: relative;
     width: 100%;
-    height: 340px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+/* The 3D Book Cover */
+.book-cover-container img {
+    width: 85%;
+    height: 310px;
     object-fit: cover;
-    transition: 0.5s ease;
+    border-radius: 3px 12px 12px 3px; /* Book spine look */
+    box-shadow: 
+        inset 4px 0 10px rgba(0,0,0,0.15),
+        inset -1px 0 2px rgba(255,255,255,0.4),
+        10px 20px 25px rgba(0,0,0,0.6);
+    transform-origin: left center;
+    transform: perspective(800px) rotateY(-15deg);
+    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+    z-index: 2;
 }
 
-.book-card:hover img {
-    transform: scale(1.05);
+/* Book Hover Effect (Pops out to the user) */
+.book-card:hover .book-cover-container img {
+    transform: perspective(800px) rotateY(0deg) scale(1.05) translateY(-5px);
+    box-shadow: 
+        inset 4px 0 10px rgba(0,0,0,0.1),
+        inset -1px 0 2px rgba(255,255,255,0.5),
+        15px 30px 35px rgba(0,0,0,0.8);
 }
 
-.book-info {
-    padding: 20px;
-    text-align: center;
+/* The Glowing Glass Shelf Underneath */
+.shelf {
+    width: 95%;
+    height: 12px;
+    background: linear-gradient(to right, rgba(255,255,255,0.05), rgba(255,255,255,0.25), rgba(255,255,255,0.05));
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    border-bottom: 4px solid rgba(0, 0, 0, 0.7);
+    border-radius: 5px; 
+    position: relative;
+    top: -3px; 
+    z-index: 1;
+    box-shadow: 
+        0 15px 25px rgba(0, 0, 0, 0.8), 
+        0 0 15px rgba(251, 191, 36, 0.15); /* Yellow glow */
 }
 
+/* =========================================
+   7. COLLECTION BADGE
+========================================= */
+.collection-badge {
+    position: absolute;
+    top: 5px;
+    left: 15px;
+    background: rgba(251, 191, 36, 0.95);
+    color: #0f172a;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 6px 14px;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    z-index: 3;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: 0.4s ease;
+}
+
+.book-card:hover .collection-badge {
+    transform: translateY(-5px);
+}
+
+/* Book Details under shelf */
 .book-info h3 {
     font-family: 'Playfair Display', serif;
     font-size: 1.2rem;
-    margin-bottom: 8px;
+    margin-bottom: 5px;
     color: #f8fafc;
-    line-height: 1.3;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.9);
+    text-align: center;
 }
 
 .book-info p {
-    color: #94a3b8;
+    color: #cbd5e1;
     font-size: 0.9rem;
     font-weight: 400;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.9);
+    text-align: center;
 }
 
-/* =========================
-   MODAL
-========================= */
+/* =========================================
+   8. MODAL (POPUP)
+========================================= */
 .modal {
     position: fixed;
     inset: 0;
@@ -262,7 +319,7 @@ body {
 
 .modal-details h3 {
     font-size: 1.1rem;
-    color: #fbbf24; /* Van Gogh Yellow Tone */
+    color: #fbbf24;
     margin-bottom: 25px;
     font-weight: 500;
 }
@@ -295,12 +352,9 @@ body {
     transform: rotate(90deg);
 }
 
-/* =========================
-   RESPONSIVE DESIGN
-========================= */
-/* =========================
-   RESPONSIVE DESIGN (Mobile Fix)
-========================= */
+/* =========================================
+   9. RESPONSIVE (MOBILE DEVICES)
+========================================= */
 @media(max-width: 768px) {
     .header { padding: 30px 15px 20px; }
     .header h1 { font-size: 2rem; }
@@ -310,29 +364,25 @@ body {
     .search-box input, .filter-box select { padding: 12px 20px 12px 45px; }
 
     .books-grid {
-        /* Changed to 140px so 2 books can fit side-by-side perfectly on smartphones */
         grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-        gap: 15px;
+        gap: 20px;
     }
     
-    .book-card img { 
-        height: 200px; /* Reduced height to make it look standard */
-    }
-
-    .book-info {
-        padding: 15px 10px;
-    }
-
-    .book-info h3 {
-        font-size: 1rem; /* Smaller font for smaller cards */
-        margin-bottom: 5px;
-    }
-
-    .book-info p {
+    /* Mobile 3D Shelf Adjustments */
+    .book-cover-container img { height: 210px; }
+    .shelf { height: 8px; width: 100%; top: -2px; }
+    
+    .collection-badge {
         font-size: 0.8rem;
+        padding: 4px 10px;
+        top: 0px;
+        left: 5px;
     }
 
-    /* Modal Mobile View Adjustment */
+    .book-info h3 { font-size: 1rem; }
+    .book-info p { font-size: 0.8rem; }
+
+    /* Modal Mobile Adjustments */
     .modal-content {
         flex-direction: column;
         max-height: 85vh;
@@ -341,7 +391,7 @@ body {
 
     .modal-content img {
         width: 100%;
-        max-height: 220px; /* Reduced so it doesn't take up the whole screen */
+        max-height: 220px;
         padding: 15px;
     }
 
@@ -355,40 +405,5 @@ body {
     .modal-details h3 { font-size: 1rem; margin-bottom: 15px; }
     .modal-details p { font-size: 0.9rem; }
     
-    .close-btn {
-        top: 10px;
-        right: 15px;
-        font-size: 2rem;
-    }
-    
-    .collection-badge {
-        font-size: 0.8rem;
-        padding: 4px 10px;
-        top: 10px;
-        left: 10px;
-    }
-}
-/* =========================
-   COLLECTION NUMBER BADGE
-========================= */
-.book-card {
-    position: relative; /* Ensure this is set so the badge stays inside the card */
-}
-
-.collection-badge {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    background: rgba(251, 191, 36, 0.95); /* Van Gogh Yellow */
-    color: #0f172a; /* Dark text for contrast */
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    font-size: 0.9rem;
-    padding: 6px 14px;
-    border-radius: 30px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-    z-index: 2; /* Keeps it above the image */
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    .close-btn { top: 10px; right: 15px; font-size: 2rem; }
 }
