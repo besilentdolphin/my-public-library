@@ -1,50 +1,642 @@
 [
     {
         "collectionNumber": 1,
-        "title": "Atomic Habits",
-        "author": "James Clear",
-        "purchaseDate": "12 January 2025",
-        "purpose": "Habit Building & Self Improvement",
-        "image": "images/atomic-habits.jpg"
+        "title": "অপেক্ষা",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/opekkha.jpg"
     },
     {
         "collectionNumber": 2,
-        "title": "The Alchemist",
-        "author": "Paulo Coelho",
-        "purchaseDate": "8 February 2025",
-        "purpose": "Motivation & Story Reading",
-        "image": "images/alchemist.jpg"
+        "title": "এই নগরে হিমু",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/ei-nogore-himu.jpg"
     },
     {
         "collectionNumber": 3,
-        "title": "Deep Work",
-        "author": "Cal Newport",
-        "purchaseDate": "15 March 2025",
-        "purpose": "Focus & Productivity",
-        "image": "images/deep-work.jpg"
+        "title": "রূপার পালঙ্ক",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/rupar-palongko.jpg"
     },
     {
         "collectionNumber": 4,
-        "title": "Clean Code",
-        "author": "Robert C. Martin",
-        "purchaseDate": "20 March 2025",
-        "purpose": "Programming Learning",
-        "image": "images/clean-code.jpg"
-    },
-    {
-        "collectionNumber": 7,
-        "title": "Swapnil",
-        "author": "Robert C. Martin",
-        "purchaseDate": "20 March 2025",
-        "purpose": "Programming Learning",
-        "image": "images/clean-code.jpg"
+        "title": "তন্দ্রাবিলাস",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/tondrabilash.jpg"
     },
     {
         "collectionNumber": 5,
-        "title": "Rich Dad Poor Dad",
-        "author": "Robert Kiyosaki",
-        "purchaseDate": "10 April 2025",
-        "purpose": "Financial Knowledge",
-        "image": "images/rich-dad.jpg"
+        "title": "অনন্ত নক্ষত্র বীথি",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/ononto-nokkhotro.jpg"
+    },
+    {
+        "collectionNumber": 6,
+        "title": "অনীশ",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/onish.jpg"
+    },
+    {
+        "collectionNumber": 7,
+        "title": "তিথির নীল তোয়ালে",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/tithir-nil-towale.jpg"
+    },
+    {
+        "collectionNumber": 8,
+        "title": "ভয়",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/bhoy.jpg"
+    },
+    {
+        "collectionNumber": 9,
+        "title": "সমুদ্রবিলাস",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/shomudrobilash.jpg"
+    },
+    {
+        "collectionNumber": 10,
+        "title": "বহুব্রীহি",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/bohubrihi.jpg"
+    },
+    {
+        "collectionNumber": 11,
+        "title": "তেতুল বনে জোছনা",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/tetul-bone-jochna.jpg"
+    },
+    {
+        "collectionNumber": 12,
+        "title": "পুতুল",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/putul.jpg"
+    },
+    {
+        "collectionNumber": 13,
+        "title": "সে ও নর্তকী",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/se-o-nortoki.jpg"
+    },
+    {
+        "collectionNumber": 14,
+        "title": "তারা তিনজন",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/tara-tinjon.jpg"
+    },
+    {
+        "collectionNumber": 15,
+        "title": "দ্বিতীয় মানব",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/ditio-manob.jpg"
+    },
+    {
+        "collectionNumber": 16,
+        "title": "পারুল ও তিনটি কুকুর",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/parul-o-tinti-kukur.jpg"
+    },
+    {
+        "collectionNumber": 17,
+        "title": "নির্বাচিত ভূতের গল্প",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/nirbachito-vhuter-golpo.jpg"
+    },
+    {
+        "collectionNumber": 18,
+        "title": "তুমি আমায় ডেকেছিলে ছুটির নিমন্ত্রণে",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/tumi-amay-dakechile.jpg"
+    },
+    {
+        "collectionNumber": 19,
+        "title": "জলকন্যা",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/jolkonna.jpg"
+    },
+    {
+        "collectionNumber": 20,
+        "title": "হোটেল গ্রেভার ইন",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/hotel-graver-inn.jpg"
+    },
+    {
+        "collectionNumber": 21,
+        "title": "ইমা",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/ima.jpg"
+    },
+    {
+        "collectionNumber": 22,
+        "title": "নবনী",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/noboni.jpg"
+    },
+    {
+        "collectionNumber": 23,
+        "title": "পোকা",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/poka.jpg"
+    },
+    {
+        "collectionNumber": 24,
+        "title": "নিষাদ",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/nishad.jpg"
+    },
+    {
+        "collectionNumber": 25,
+        "title": "প্রিয়তমেষু",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/priyotomeshu.jpg"
+    },
+    {
+        "collectionNumber": 26,
+        "title": "মানবী",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/manobi.jpg"
+    },
+    {
+        "collectionNumber": 27,
+        "title": "ওমেগা পয়েন্ট",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/omega-point.jpg"
+    },
+    {
+        "collectionNumber": 28,
+        "title": "চাঁদের আলোয় কয়েকজন যুবক",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/chander-aloy.jpg"
+    },
+    {
+        "collectionNumber": 29,
+        "title": "তোমাকে",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/tomake.jpg"
+    },
+    {
+        "collectionNumber": 30,
+        "title": "কিছুক্ষণ",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/kichukkhon.jpg"
+    },
+    {
+        "collectionNumber": 31,
+        "title": "ইস্টিশান",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/istishon.jpg"
+    },
+    {
+        "collectionNumber": 32,
+        "title": "বৃষ্টি ও মেঘমালা",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/brishti-o-meghmala.jpg"
+    },
+    {
+        "collectionNumber": 33,
+        "title": "মীরার গ্রামের বাড়ি",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/mirar-gramer-bari.jpg"
+    },
+    {
+        "collectionNumber": 34,
+        "title": "অমানুষ",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/omanush.jpg"
+    },
+    {
+        "collectionNumber": 35,
+        "title": "সৌরভ",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/shourobh.jpg"
+    },
+    {
+        "collectionNumber": 36,
+        "title": "সম্রাট",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/shomrat.jpg"
+    },
+    {
+        "collectionNumber": 37,
+        "title": "বাদশাই নামদার",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/badshahi-namdar.jpg"
+    },
+    {
+        "collectionNumber": 38,
+        "title": "হরতন ইশকাপন",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/horoton-ishkapon.jpg"
+    },
+    {
+        "collectionNumber": 39,
+        "title": "তোমাদের এই নগরে",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/tomader-ei-nogore.jpg"
+    },
+    {
+        "collectionNumber": 40,
+        "title": "গৌরীপুর জংশন",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/gouripur-junction.jpg"
+    },
+    {
+        "collectionNumber": 41,
+        "title": "অয়োময়",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/oyomoy.jpg"
+    },
+    {
+        "collectionNumber": 42,
+        "title": "সূর্যের দিন",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/surjer-din.jpg"
+    },
+    {
+        "collectionNumber": 43,
+        "title": "কোথাও কেও নেই",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/kothao-keu-nei.jpg"
+    },
+    {
+        "collectionNumber": 44,
+        "title": "নলিনী বাবু বিএসসি",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/nolini-babu-bsc.jpg"
+    },
+    {
+        "collectionNumber": 45,
+        "title": "কুটু মিয়া",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/kutu-miya.jpg"
+    },
+    {
+        "collectionNumber": 46,
+        "title": "ফেরা",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/fera.jpg"
+    },
+    {
+        "collectionNumber": 47,
+        "title": "ময়ূরাক্ষী",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/moyurakkhi.jpg"
+    },
+    {
+        "collectionNumber": 48,
+        "title": "কিছু শৈশব",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/kichu-shoishob.jpg"
+    },
+    {
+        "collectionNumber": 49,
+        "title": "ম্যাজিক মুনশী",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/magic-munshi.jpg"
+    },
+    {
+        "collectionNumber": 50,
+        "title": "একটি সাইকেল এবং কয়েকটি ডাহুক পাখি",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/ekti-cycle.jpg"
+    },
+    {
+        "collectionNumber": 51,
+        "title": "চলে যায় বসন্তের দিন",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/chole-jay-bosonter-din.jpg"
+    },
+    {
+        "collectionNumber": 52,
+        "title": "দারুচিনি দ্বীপ",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/daruchini-dip.jpg"
+    },
+    {
+        "collectionNumber": 53,
+        "title": "নন্দিত নরকে",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/nondito-noroke.jpg"
+    },
+    {
+        "collectionNumber": 54,
+        "title": "যখন গিয়েছে ডুবে পঞ্চমীর চাঁদ",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/jokhon-giyeche-dube.jpg"
+    },
+    {
+        "collectionNumber": 55,
+        "title": "শঙ্খনীল কারাগার",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/shonkhonil-karagar.jpg"
+    },
+    {
+        "collectionNumber": 56,
+        "title": "আমি এবং কয়েকটি প্রজাপতি",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/ami-ebong-koyekti.jpg"
+    },
+    {
+        "collectionNumber": 57,
+        "title": "লিলুয়া বাতাস",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/lilua-batash.jpg"
+    },
+    {
+        "collectionNumber": 58,
+        "title": "বাসর",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/bashor.jpg"
+    },
+    {
+        "collectionNumber": 59,
+        "title": "পুফি",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/pufi.jpg"
+    },
+    {
+        "collectionNumber": 60,
+        "title": "মাতাল হাওয়া",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/matal-hawa.jpg"
+    },
+    {
+        "collectionNumber": 61,
+        "title": "ফিহা সমীকরণ",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/fiha-shomikoron.jpg"
+    },
+    {
+        "collectionNumber": 62,
+        "title": "প্রিয় পদরেখা",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/priyo-podorekha.jpg"
+    },
+    {
+        "collectionNumber": 63,
+        "title": "আমি এবং আমরা",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/ami-ebong-amra.jpg"
+    },
+    {
+        "collectionNumber": 64,
+        "title": "আমাদের শাদা বাড়ি",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/amader-shada-bari.jpg"
+    },
+    {
+        "collectionNumber": 65,
+        "title": "রূপালী দ্বীপ",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/rupali-dip.jpg"
+    },
+    {
+        "collectionNumber": 66,
+        "title": "এপিটাফ",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/epitaph.jpg"
+    },
+    {
+        "collectionNumber": 67,
+        "title": "শুভ্র",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/shuvro.jpg"
+    },
+    {
+        "collectionNumber": 68,
+        "title": "আজ আমি কোথাও যাবো না",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/aj-ami-kothao-jabo-na.jpg"
+    },
+    {
+        "collectionNumber": 69,
+        "title": "মধ্যাহ্ন",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/moddhanho.jpg"
+    },
+    {
+        "collectionNumber": 70,
+        "title": "অচিনপুর",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/ochinpur.jpg"
+    },
+    {
+        "collectionNumber": 71,
+        "title": "কালো জাদুকর",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/kalo-jadukor.jpg"
+    },
+    {
+        "collectionNumber": 72,
+        "title": "উড়ালপঙ্খী",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/uralpongkhi.jpg"
+    },
+    {
+        "collectionNumber": 73,
+        "title": "সাজঘর",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/shajghor.jpg"
+    },
+    {
+        "collectionNumber": 74,
+        "title": "এই আমি",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/ei-ami.jpg"
+    },
+    {
+        "collectionNumber": 75,
+        "title": "আগুনের পরশমণি",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/aguner-poroshmoni.jpg"
+    },
+    {
+        "collectionNumber": 76,
+        "title": "বসন্ত বিলাপ",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/boshonto-bilap.jpg"
+    },
+    {
+        "collectionNumber": 77,
+        "title": "সানাউল্লার মহাবিপদ",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/sanaullar-mohabipod.jpg"
+    },
+    {
+        "collectionNumber": 78,
+        "title": "যশোহা বৃক্ষের দেশে",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/joshoha-brikkher-deshe.jpg"
+    },
+    {
+        "collectionNumber": 79,
+        "title": "জীবনকৃষ্ণ মেমোরিয়াল হাইস্কুল",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/jibonkrishno-memorial.jpg"
+    },
+    {
+        "collectionNumber": 80,
+        "title": "নিশিথিনী",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/nishithini.jpg"
     }
 ]
