@@ -1,0 +1,57 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Personal Library</title>
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <h1>📚 My Personal Library</h1>
+        <p>আমার ব্যক্তিগত বই সংগ্রহ</p>
+    </header>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <label for="authorFilter">লেখক অনুযায়ী ফিল্টার:</label>
+
+        <select id="authorFilter">
+            <option value="all">সব লেখক</option>
+        </select>
+    </section>
+
+    <!-- Books Grid -->
+    <main class="books-container" id="booksContainer">
+
+    </main>
+
+    <!-- Modal -->
+    <div class="modal" id="bookModal">
+
+        <div class="modal-content">
+
+            <span class="close-btn" id="closeModal">&times;</span>
+
+            <img id="modalImage" src="" alt="Book Cover">
+
+            <h2 id="modalTitle"></h2>
+
+            <h3 id="modalAuthor"></h3>
+
+            <p><strong>কেনার তারিখ:</strong> <span id="modalDate"></span></p>
+
+            <p><strong>কেনার উদ্দেশ্য:</strong> <span id="modalPurpose"></span></p>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
