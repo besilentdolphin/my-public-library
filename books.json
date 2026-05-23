@@ -638,5 +638,14 @@
         "purchaseDate": "TBD",
         "purpose": "Story Reading",
         "image": "images/nishithini.jpg"
+    },
+    {
+        "collectionNumber": 81,
+        "title": "শাপমোচন",
+        "author": "Falguni Mukhopadhyay",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/shapmochan.jpg"
     }
+
 ]
