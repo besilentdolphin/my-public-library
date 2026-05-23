@@ -646,6 +646,23 @@
         "purchaseDate": "TBD",
         "purpose": "Story Reading",
         "image": "images/shapmochan.jpg"
+    },
+    {
+        "collectionNumber": 82,
+        "title": "আমি তপু",
+        "author": "Muhammed Zafar Iqbal",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/topu.jpg"
+    },
+    {
+        "collectionNumber": 82,
+        "title": "আমার বন্ধু রাশেদ",
+        "author": "Muhammed Zafar Iqbal",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "image": "images/rashed.jpg"
     }
+
 
 ]
