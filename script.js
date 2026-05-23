@@ -2,18 +2,18 @@
    STATE & DOM ELEMENTS
 ========================================= */
 let books = []; 
-let currentFilteredBooks = []; // To store searched/filtered results
+let currentFilteredBooks = []; 
 let currentPage = 1;
-const booksPerPage = 8; // Number of books per page
+const booksPerPage = 8; 
 
 const booksGrid = document.getElementById("booksGrid");
 const paginationContainer = document.getElementById("pagination");
 const authorFilter = document.getElementById("authorFilter");
 const searchInput = document.getElementById("searchInput");
+const totalBooksCount = document.getElementById("totalBooksCount");
+
 const modal = document.getElementById("bookModal");
 const closeBtn = document.getElementById("closeBtn");
-
-/* Modal Details Elements */
 const modalImage = document.getElementById("modalImage");
 const modalTitle = document.getElementById("modalTitle");
 const modalAuthor = document.getElementById("modalAuthor");
@@ -27,14 +27,20 @@ async function fetchBooks() {
     try {
         const response = await fetch("books.json");
         books = await response.json();
-        currentFilteredBooks = books; // Initially all books are filtered books
+        currentFilteredBooks = books; 
+        
+        // Update Total Enlisted Books Counter
+        if (totalBooksCount) {
+            totalBooksCount.textContent = books.length;
+        }
+
         initApp(); 
     } catch (error) {
         console.error("Error loading books.json:", error);
         booksGrid.innerHTML = `
             <div style="grid-column: 1 / -1; text-align: center; padding: 40px; color: #ef4444;">
                 <h2>Error loading data!</h2>
-                <p>Please make sure you are running this on a Local Server.</p>
+                <p>Please make sure you are running this on a Local Server (e.g., Live Server in VS Code).</p>
             </div>
         `;
     }
@@ -54,16 +60,16 @@ function displayBooks(bookArray) {
                 <p style="color: #94a3b8; font-size: 1rem;">Try adjusting your search or author filter.</p>
             </div>
         `;
-        paginationContainer.innerHTML = ""; // Clear pagination
+        paginationContainer.innerHTML = ""; 
         return;
     }
 
-    // 2. Pagination Math (Slice the array for the current page)
+    // 2. Pagination Math 
     const startIndex = (currentPage - 1) * booksPerPage;
     const endIndex = startIndex + booksPerPage;
     const paginatedBooks = bookArray.slice(startIndex, endIndex);
 
-    // 3. Render only the books for this page
+    // 3. Render Books
     paginatedBooks.forEach(book => {
         const { collectionNumber, title, author, image, purchaseDate, purpose } = book;
 
@@ -82,6 +88,7 @@ function displayBooks(bookArray) {
             </div>
         `;
 
+        // Modal Logic
         card.addEventListener("click", () => {
             modal.style.display = "flex";
             modalImage.src = image;
@@ -110,9 +117,9 @@ function renderPagination(totalItems) {
     paginationContainer.innerHTML = "";
     const totalPages = Math.ceil(totalItems / booksPerPage);
 
-    if (totalPages <= 1) return; // Hide pagination if there is only 1 page
+    if (totalPages <= 1) return; 
 
-    // Previous Button
+    // Prev Button
     const prevBtn = document.createElement("button");
     prevBtn.innerHTML = "&laquo; Prev";
     prevBtn.disabled = currentPage === 1;
@@ -125,7 +132,7 @@ function renderPagination(totalItems) {
     });
     paginationContainer.appendChild(prevBtn);
 
-    // Numbered Buttons
+    // Number Buttons
     for (let i = 1; i <= totalPages; i++) {
         const pageBtn = document.createElement("button");
         pageBtn.textContent = i;
@@ -154,7 +161,7 @@ function renderPagination(totalItems) {
     paginationContainer.appendChild(nextBtn);
 }
 
-// Smooth scroll to top of the grid when page changes
+// Scroll to top on page change
 function scrollToTop() {
     window.scrollTo({
         top: document.querySelector('.controls').offsetTop - 20,
@@ -163,14 +170,23 @@ function scrollToTop() {
 }
 
 /* =========================================
-   LOAD AUTHORS & FILTERS
+   LOAD AUTHORS & FILTERS (Updated with Book Count)
 ========================================= */
 function loadAuthors() {
-    const authors = [...new Set(books.map(book => book.author))];
+    // 1. Calculate how many books each author has
+    const authorCounts = {};
+    books.forEach(book => {
+        authorCounts[book.author] = (authorCounts[book.author] || 0) + 1;
+    });
+
+    // 2. Get unique author names and sort them alphabetically
+    const authors = Object.keys(authorCounts).sort();
+
+    // 3. Populate dropdown
     authors.forEach(author => {
         const option = document.createElement("option");
-        option.value = author;
-        option.textContent = author;
+        option.value = author; // Value remains exactly the author's name for filtering
+        option.textContent = `${author} (${authorCounts[author]})`; // Displays name + count
         authorFilter.appendChild(option);
     });
 }
@@ -192,7 +208,7 @@ function filterBooks() {
         );
     }
 
-    currentPage = 1; // Reset to page 1 whenever searching or filtering
+    currentPage = 1; 
     displayBooks(currentFilteredBooks);
 }
 
@@ -228,5 +244,5 @@ function initApp() {
     loadAuthors();
 }
 
-// Start the process
+// Start
 fetchBooks();
