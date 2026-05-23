@@ -298,35 +298,75 @@ body {
 /* =========================
    RESPONSIVE DESIGN
 ========================= */
+/* =========================
+   RESPONSIVE DESIGN (Mobile Fix)
+========================= */
 @media(max-width: 768px) {
-    .header h1 { font-size: 2.2rem; }
+    .header { padding: 30px 15px 20px; }
+    .header h1 { font-size: 2rem; }
+    .header p { font-size: 0.9rem; }
     
+    .controls { gap: 15px; }
+    .search-box input, .filter-box select { padding: 12px 20px 12px 45px; }
+
     .books-grid {
-        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-        gap: 20px;
+        /* Changed to 140px so 2 books can fit side-by-side perfectly on smartphones */
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 15px;
     }
     
-    .book-card img { height: 260px; }
+    .book-card img { 
+        height: 200px; /* Reduced height to make it look standard */
+    }
 
+    .book-info {
+        padding: 15px 10px;
+    }
+
+    .book-info h3 {
+        font-size: 1rem; /* Smaller font for smaller cards */
+        margin-bottom: 5px;
+    }
+
+    .book-info p {
+        font-size: 0.8rem;
+    }
+
+    /* Modal Mobile View Adjustment */
     .modal-content {
         flex-direction: column;
-        max-height: 90vh;
+        max-height: 85vh;
         overflow-y: auto;
     }
 
     .modal-content img {
         width: 100%;
-        max-height: 300px;
-        padding: 20px;
+        max-height: 220px; /* Reduced so it doesn't take up the whole screen */
+        padding: 15px;
     }
 
     .modal-details {
         width: 100%;
-        padding: 25px;
+        padding: 20px;
         text-align: center;
     }
 
-    .modal-details h2 { font-size: 1.8rem; }
+    .modal-details h2 { font-size: 1.6rem; margin-bottom: 5px; }
+    .modal-details h3 { font-size: 1rem; margin-bottom: 15px; }
+    .modal-details p { font-size: 0.9rem; }
+    
+    .close-btn {
+        top: 10px;
+        right: 15px;
+        font-size: 2rem;
+    }
+    
+    .collection-badge {
+        font-size: 0.8rem;
+        padding: 4px 10px;
+        top: 10px;
+        left: 10px;
+    }
 }
 /* =========================
    COLLECTION NUMBER BADGE
