@@ -1,66 +1,66 @@
-// script.js
-
-// ============================
-// Books Data
-// ============================
+/* =========================================
+   JSON BOOK DATABASE
+========================================= */
 
 const books = [
 
     {
-        title: "Atomic Habits",
-        author: "James Clear",
-        purchaseDate: "12 January 2025",
-        purpose: "Self Improvement এবং Habit Building",
-        image: "images/atomic-habits.jpg"
+        "title": "Atomic Habits",
+        "author": "James Clear",
+        "purchaseDate": "12 January 2025",
+        "purpose": "Habit Building & Self Improvement",
+        "image": "images/atomic-habits.jpg"
     },
 
     {
-        title: "Rich Dad Poor Dad",
-        author: "Robert Kiyosaki",
-        purchaseDate: "20 February 2025",
-        purpose: "Financial Knowledge",
-        image: "images/rich-dad.jpg"
+        "title": "The Alchemist",
+        "author": "Paulo Coelho",
+        "purchaseDate": "8 February 2025",
+        "purpose": "Motivation & Story Reading",
+        "image": "images/alchemist.jpg"
     },
 
     {
-        title: "The Alchemist",
-        author: "Paulo Coelho",
-        purchaseDate: "15 March 2025",
-        purpose: "Motivation এবং গল্প পড়া",
-        image: "images/alchemist.jpg"
+        "title": "Deep Work",
+        "author": "Cal Newport",
+        "purchaseDate": "15 March 2025",
+        "purpose": "Focus & Productivity",
+        "image": "images/deep-work.jpg"
     },
 
     {
-        title: "Clean Code",
-        author: "Robert C. Martin",
-        purchaseDate: "10 April 2025",
-        purpose: "Programming শেখা",
-        image: "images/clean-code.jpg"
+        "title": "Clean Code",
+        "author": "Robert C. Martin",
+        "purchaseDate": "20 March 2025",
+        "purpose": "Programming Learning",
+        "image": "images/clean-code.jpg"
     },
 
     {
-        title: "Deep Work",
-        author: "Cal Newport",
-        purchaseDate: "5 May 2025",
-        purpose: "Focus এবং Productivity",
-        image: "images/deep-work.jpg"
+        "title": "Rich Dad Poor Dad",
+        "author": "Robert Kiyosaki",
+        "purchaseDate": "10 April 2025",
+        "purpose": "Financial Knowledge",
+        "image": "images/rich-dad.jpg"
     }
 
 ];
 
-// ============================
-// HTML Elements
-// ============================
+/* =========================================
+   ELEMENTS
+========================================= */
 
-const booksContainer = document.getElementById("booksContainer");
+const booksGrid = document.getElementById("booksGrid");
 
 const authorFilter = document.getElementById("authorFilter");
 
+const searchInput = document.getElementById("searchInput");
+
 const modal = document.getElementById("bookModal");
 
-const closeModal = document.getElementById("closeModal");
+const closeBtn = document.getElementById("closeBtn");
 
-// Modal Elements
+/* Modal Elements */
 
 const modalImage = document.getElementById("modalImage");
 
@@ -72,14 +72,30 @@ const modalDate = document.getElementById("modalDate");
 
 const modalPurpose = document.getElementById("modalPurpose");
 
-
-// ============================
-// Display Books
-// ============================
+/* =========================================
+   DISPLAY BOOKS
+========================================= */
 
 function displayBooks(bookArray){
 
-    booksContainer.innerHTML = "";
+    booksGrid.innerHTML = "";
+
+    if(bookArray.length === 0){
+
+        booksGrid.innerHTML = `
+        
+        <h2 style="
+            text-align:center;
+            width:100%;
+            color:#777;
+        ">
+            No books found.
+        </h2>
+        
+        `;
+
+        return;
+    }
 
     bookArray.forEach(book => {
 
@@ -101,7 +117,7 @@ function displayBooks(bookArray){
         
         `;
 
-        // Open Modal
+        /* Modal Open */
 
         card.addEventListener("click", () => {
 
@@ -119,24 +135,25 @@ function displayBooks(bookArray){
 
         });
 
-        booksContainer.appendChild(card);
+        booksGrid.appendChild(card);
 
     });
 
 }
 
-
-// ============================
-// Populate Author Filter
-// ============================
+/* =========================================
+   LOAD AUTHORS
+========================================= */
 
 function loadAuthors(){
 
-    const authors = [...new Set(books.map(book => book.author))];
+    const authors =
+    [...new Set(books.map(book => book.author))];
 
     authors.forEach(author => {
 
-        const option = document.createElement("option");
+        const option =
+        document.createElement("option");
 
         option.value = author;
 
@@ -148,38 +165,61 @@ function loadAuthors(){
 
 }
 
+/* =========================================
+   FILTER + SEARCH
+========================================= */
 
-// ============================
-// Filter Books
-// ============================
+function filterBooks(){
 
-authorFilter.addEventListener("change", () => {
+    const selectedAuthor =
+    authorFilter.value;
 
-    const selectedAuthor = authorFilter.value;
+    const searchText =
+    searchInput.value.toLowerCase();
 
-    if(selectedAuthor === "all"){
+    let filteredBooks = books;
 
-        displayBooks(books);
+    /* Author Filter */
 
-    }
-    else{
+    if(selectedAuthor !== "all"){
 
-        const filteredBooks = books.filter(book => 
+        filteredBooks =
+        filteredBooks.filter(book =>
             book.author === selectedAuthor
         );
 
-        displayBooks(filteredBooks);
-
     }
 
-});
+    /* Search Filter */
 
+    filteredBooks =
+    filteredBooks.filter(book =>
+        book.title
+        .toLowerCase()
+        .includes(searchText)
+    );
 
-// ============================
-// Close Modal
-// ============================
+    displayBooks(filteredBooks);
 
-closeModal.addEventListener("click", () => {
+}
+
+/* Event Listeners */
+
+authorFilter.addEventListener(
+    "change",
+    filterBooks
+);
+
+searchInput.addEventListener(
+    "input",
+    filterBooks
+);
+
+/* =========================================
+   CLOSE MODAL
+========================================= */
+
+closeBtn.addEventListener("click", () => {
 
     modal.style.display = "none";
 
@@ -195,10 +235,9 @@ window.addEventListener("click", (e) => {
 
 });
 
-
-// ============================
-// Initial Load
-// ============================
+/* =========================================
+   INITIAL LOAD
+========================================= */
 
 displayBooks(books);
 

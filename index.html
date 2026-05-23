@@ -1,51 +1,83 @@
-<!-- index.html -->
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Personal Library</title>
+
+    <title>Raisa & Sara's Personal Collection</title>
 
     <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
+
+    <!-- Background Decoration -->
+    <div class="bg-pattern"></div>
 
     <!-- Header -->
     <header class="header">
-        <h1>📚 My Personal Library</h1>
-        <p>আমার ব্যক্তিগত বই সংগ্রহ</p>
+
+        <h1>📚 Raisa & Sara's Personal Collection</h1>
+
+        <p>Radhanagar, Pabna-6600</p>
+
     </header>
 
-    <!-- Filter Section -->
-    <section class="filter-section">
-        <label for="authorFilter">লেখক অনুযায়ী ফিল্টার:</label>
+    <!-- Controls -->
+    <section class="controls">
 
-        <select id="authorFilter">
-            <option value="all">সব লেখক</option>
-        </select>
+        <!-- Search -->
+        <div class="search-box">
+
+            <input type="text"
+                   id="searchInput"
+                   placeholder="Search by book name...">
+
+        </div>
+
+        <!-- Filter -->
+        <div class="filter-box">
+
+            <select id="authorFilter">
+
+                <option value="all">All Authors</option>
+
+            </select>
+
+        </div>
+
     </section>
 
     <!-- Books Grid -->
-    <main class="books-container" id="booksContainer">
-
-    </main>
+    <main class="books-grid" id="booksGrid"></main>
 
     <!-- Modal -->
     <div class="modal" id="bookModal">
 
         <div class="modal-content">
 
-            <span class="close-btn" id="closeModal">&times;</span>
+            <span class="close-btn" id="closeBtn">&times;</span>
 
             <img id="modalImage" src="" alt="Book Cover">
 
-            <h2 id="modalTitle"></h2>
+            <div class="modal-details">
 
-            <h3 id="modalAuthor"></h3>
+                <h2 id="modalTitle"></h2>
 
-            <p><strong>কেনার তারিখ:</strong> <span id="modalDate"></span></p>
+                <h3 id="modalAuthor"></h3>
 
-            <p><strong>কেনার উদ্দেশ্য:</strong> <span id="modalPurpose"></span></p>
+                <p>
+                    <strong>Purchase Date:</strong>
+                    <span id="modalDate"></span>
+                </p>
+
+                <p>
+                    <strong>Purpose:</strong>
+                    <span id="modalPurpose"></span>
+                </p>
+
+            </div>
 
         </div>
 
@@ -54,4 +86,5 @@
     <script src="script.js"></script>
 
 </body>
+
 </html>
