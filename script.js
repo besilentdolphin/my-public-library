@@ -1,9 +1,13 @@
 /* =========================================
    STATE & DOM ELEMENTS
 ========================================= */
-let books = []; // We will load the data into this array from JSON
+let books = []; 
+let currentFilteredBooks = []; // To store searched/filtered results
+let currentPage = 1;
+const booksPerPage = 8; // Number of books per page
 
 const booksGrid = document.getElementById("booksGrid");
+const paginationContainer = document.getElementById("pagination");
 const authorFilter = document.getElementById("authorFilter");
 const searchInput = document.getElementById("searchInput");
 const modal = document.getElementById("bookModal");
@@ -23,24 +27,26 @@ async function fetchBooks() {
     try {
         const response = await fetch("books.json");
         books = await response.json();
-        initApp(); // Initialize after data is loaded
+        currentFilteredBooks = books; // Initially all books are filtered books
+        initApp(); 
     } catch (error) {
         console.error("Error loading books.json:", error);
         booksGrid.innerHTML = `
             <div style="grid-column: 1 / -1; text-align: center; padding: 40px; color: #ef4444;">
                 <h2>Error loading data!</h2>
-                <p>Please make sure you are running this on a Local Server (like VS Code Live Server).</p>
+                <p>Please make sure you are running this on a Local Server.</p>
             </div>
         `;
     }
 }
 
 /* =========================================
-   DISPLAY BOOKS
+   DISPLAY BOOKS WITH PAGINATION
 ========================================= */
 function displayBooks(bookArray) {
     booksGrid.innerHTML = "";
 
+    // 1. Handle Empty State
     if (bookArray.length === 0) {
         booksGrid.innerHTML = `
             <div style="grid-column: 1 / -1; text-align: center; padding: 60px 20px; background: rgba(30, 41, 59, 0.5); backdrop-filter: blur(10px); border-radius: 16px; border: 1px solid rgba(255,255,255,0.1);">
@@ -48,27 +54,34 @@ function displayBooks(bookArray) {
                 <p style="color: #94a3b8; font-size: 1rem;">Try adjusting your search or author filter.</p>
             </div>
         `;
+        paginationContainer.innerHTML = ""; // Clear pagination
         return;
     }
 
-    bookArray.forEach(book => {
+    // 2. Pagination Math (Slice the array for the current page)
+    const startIndex = (currentPage - 1) * booksPerPage;
+    const endIndex = startIndex + booksPerPage;
+    const paginatedBooks = bookArray.slice(startIndex, endIndex);
+
+    // 3. Render only the books for this page
+    paginatedBooks.forEach(book => {
         const { collectionNumber, title, author, image, purchaseDate, purpose } = book;
 
         const card = document.createElement("div");
         card.classList.add("book-card");
 
-        // script.js এর displayBooks ফাংশনের ভেতরের card.innerHTML অংশটুকু এভাবে পরিবর্তন করুন:
-        
         card.innerHTML = `
             <div class="book-cover-container">
                 <div class="collection-badge">#${collectionNumber}</div>
                 <img src="${image}" alt="${title}" onerror="this.src='https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=600&auto=format&fit=crop';">
-                <div class="shelf"></div> </div>
+                <div class="shelf"></div>
+            </div>
             <div class="book-info">
                 <h3>${title}</h3>
                 <p>${author}</p>
             </div>
         `;
+
         card.addEventListener("click", () => {
             modal.style.display = "flex";
             modalImage.src = image;
@@ -84,6 +97,68 @@ function displayBooks(bookArray) {
         });
 
         booksGrid.appendChild(card);
+    });
+
+    // 4. Render Pagination Buttons
+    renderPagination(bookArray.length);
+}
+
+/* =========================================
+   RENDER PAGINATION CONTROLS
+========================================= */
+function renderPagination(totalItems) {
+    paginationContainer.innerHTML = "";
+    const totalPages = Math.ceil(totalItems / booksPerPage);
+
+    if (totalPages <= 1) return; // Hide pagination if there is only 1 page
+
+    // Previous Button
+    const prevBtn = document.createElement("button");
+    prevBtn.innerHTML = "&laquo; Prev";
+    prevBtn.disabled = currentPage === 1;
+    prevBtn.addEventListener("click", () => {
+        if (currentPage > 1) {
+            currentPage--;
+            displayBooks(currentFilteredBooks);
+            scrollToTop();
+        }
+    });
+    paginationContainer.appendChild(prevBtn);
+
+    // Numbered Buttons
+    for (let i = 1; i <= totalPages; i++) {
+        const pageBtn = document.createElement("button");
+        pageBtn.textContent = i;
+        if (i === currentPage) pageBtn.classList.add("active");
+        
+        pageBtn.addEventListener("click", () => {
+            currentPage = i;
+            displayBooks(currentFilteredBooks);
+            scrollToTop();
+        });
+        
+        paginationContainer.appendChild(pageBtn);
+    }
+
+    // Next Button
+    const nextBtn = document.createElement("button");
+    nextBtn.innerHTML = "Next &raquo;";
+    nextBtn.disabled = currentPage === totalPages;
+    nextBtn.addEventListener("click", () => {
+        if (currentPage < totalPages) {
+            currentPage++;
+            displayBooks(currentFilteredBooks);
+            scrollToTop();
+        }
+    });
+    paginationContainer.appendChild(nextBtn);
+}
+
+// Smooth scroll to top of the grid when page changes
+function scrollToTop() {
+    window.scrollTo({
+        top: document.querySelector('.controls').offsetTop - 20,
+        behavior: 'smooth'
     });
 }
 
@@ -104,20 +179,21 @@ function filterBooks() {
     const selectedAuthor = authorFilter.value;
     const searchText = searchInput.value.toLowerCase().trim();
 
-    let filteredBooks = books;
+    currentFilteredBooks = books;
 
     if (selectedAuthor !== "all") {
-        filteredBooks = filteredBooks.filter(book => book.author === selectedAuthor);
+        currentFilteredBooks = currentFilteredBooks.filter(book => book.author === selectedAuthor);
     }
 
     if (searchText) {
-        filteredBooks = filteredBooks.filter(book => 
+        currentFilteredBooks = currentFilteredBooks.filter(book => 
             book.title.toLowerCase().includes(searchText) || 
             book.author.toLowerCase().includes(searchText)
         );
     }
 
-    displayBooks(filteredBooks);
+    currentPage = 1; // Reset to page 1 whenever searching or filtering
+    displayBooks(currentFilteredBooks);
 }
 
 /* =========================================
@@ -148,7 +224,7 @@ document.addEventListener("keydown", (e) => {
    INITIALIZE APP
 ========================================= */
 function initApp() {
-    displayBooks(books);
+    displayBooks(currentFilteredBooks);
     loadAuthors();
 }
 

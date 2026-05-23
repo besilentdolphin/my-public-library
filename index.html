@@ -5,60 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Raisa & Sara's Personal Collection</title>
 
-    <!-- Google Fonts: Playfair Display for headings, Poppins for body text -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     
-    <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-    <!-- Background Decoration -->
     <div class="bg-pattern"></div>
 
     <div class="container">
-        <!-- Header -->
         <header class="header">
             <div class="header-content">
-                <h1><i class="fa-solid fa-book-open-reader"></i> Raisa & Sara's Personal Collection</h1>
+                <h1><i class="fa-solid fa-book-open-reader"></i> Raisa & Sara's Collection</h1>
                 <p><i class="fa-solid fa-location-dot"></i> Radhanagar, Pabna-6600</p>
             </div>
         </header>
 
-        <!-- Controls -->
         <section class="controls">
-            <!-- Search -->
             <div class="search-box">
                 <i class="fa-solid fa-magnifying-glass search-icon"></i>
                 <input type="text" id="searchInput" placeholder="Search by book name..." autocomplete="off">
             </div>
 
-            <!-- Filter -->
             <div class="filter-box">
                 <i class="fa-solid fa-filter filter-icon"></i>
                 <select id="authorFilter">
                     <option value="all">All Authors</option>
-                    <!-- Options will be populated by JS -->
-                </select>
+                    </select>
             </div>
         </section>
 
-        <!-- Books Grid -->
         <main class="books-grid" id="booksGrid">
-            <!-- Book cards will be generated here via JavaScript -->
-        </main>
+            </main>
 
-        <!-- Empty State (When no books match search) -->
-        <div id="noResults" class="no-results hidden">
-            <i class="fa-solid fa-book-skull"></i>
-            <p>No books found. Try a different search!</p>
-        </div>
+        <div class="pagination" id="pagination">
+            </div>
     </div>
 
-    <!-- Modal -->
     <div class="modal" id="bookModal">
         <div class="modal-content">
             <button class="close-btn" id="closeBtn" aria-label="Close modal">&times;</button>
