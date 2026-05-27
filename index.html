@@ -4,13 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Explore Raisa & Sara's curated personal book collection." />
-    <meta name="theme-color" content="#0a192f" />
-    
+    <meta name="theme-color" content="#0a0f1e" />
     <title>Raisa & Sara's Personal Library</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
     <link rel="stylesheet" href="style.css" />
@@ -19,106 +18,131 @@
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.2/color-thief.min.js"></script>
     <script defer src="script.js"></script>
 </head>
-<body class="theme-starry">
+<body class="theme-dark">
 
-    <div class="cursor-glow" aria-hidden="true"></div>
+    <!-- Background layers -->
+    <div class="bg-nebula" aria-hidden="true"></div>
+    <div class="bg-grid" aria-hidden="true"></div>
     <div id="tsparticles" aria-hidden="true"></div>
-    <div class="bg-pattern" aria-hidden="true"></div>
-    <div class="aurora" aria-hidden="true"></div>
+    <div class="cursor-glow" aria-hidden="true"></div>
 
-    <nav class="navbar" role="navigation">
+    <!-- Navbar -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="nav-logo">
-            <i class="fa-solid fa-book-open-reader"></i>
-            Raisa & Sara's Personal Library
+            <span class="logo-icon"><i class="fa-solid fa-book-open-reader"></i></span>
+            <span class="logo-text">Raisa <span class="logo-amp">&</span> Sara</span>
         </div>
-
         <div class="nav-right">
-            <button id="favoritesToggle" class="theme-btn fav-nav-btn" aria-label="Show Favorites">
+            <button id="favoritesToggle" class="icon-btn" aria-label="Show Favorites">
                 <i class="fa-solid fa-heart"></i>
+                <span class="btn-tooltip">Favourites</span>
             </button>
-            <button id="themeToggle" class="theme-btn" aria-label="Toggle Theme">
-                <i class="fa-solid fa-moon"></i>
+            <button id="themeToggle" class="icon-btn" aria-label="Toggle Theme">
+                <i class="fa-solid fa-sun"></i>
+                <span class="btn-tooltip">Toggle theme</span>
             </button>
         </div>
     </nav>
 
     <div class="container">
-        <header class="header">
-            <div class="header-glossy-box">
-                <h2 class="sparkle-text" id="mainTitle">
-                    <i class="fa-solid fa-book-open-reader"></i>
-                    Raisa & Sara's Personal Library
-                </h2>
-                <p class="highlight-location">
-                    <i class="fa-solid fa-location-dot"></i> Radhanagar, Pabna-6600
-                </p>
+
+        <!-- Hero Header -->
+        <header class="hero" role="banner">
+            <div class="hero-inner">
+                <p class="hero-eyebrow"><i class="fa-solid fa-location-dot"></i> Radhanagar, Pabna-6600</p>
+                <h1 class="hero-title" id="mainTitle">
+                    Raisa <em>&amp;</em> Sara's<br>Personal Library
+                </h1>
+                <p class="hero-subtitle">A curated collection of books, lovingly gathered.</p>
+                <div class="hero-orbs" aria-hidden="true">
+                    <span class="orb orb-1"></span>
+                    <span class="orb orb-2"></span>
+                    <span class="orb orb-3"></span>
+                </div>
             </div>
         </header>
 
+        <!-- Controls -->
         <section class="controls" aria-label="Book filtering controls">
-            <div class="search-box">
-                <i class="fa-solid fa-magnifying-glass search-icon" aria-hidden="true"></i>
-                <input type="text" id="searchInput" placeholder="Search by book name or author..." autocomplete="off">
+            <div class="search-wrap">
+                <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                <input type="text" id="searchInput" placeholder="Search by title or author…" autocomplete="off" aria-label="Search books">
+                <span class="search-clear" id="searchClear" aria-label="Clear search"><i class="fa-solid fa-xmark"></i></span>
             </div>
-
-            <div class="filter-box">
-                <i class="fa-solid fa-user-pen filter-icon" aria-hidden="true"></i>
+            <div class="select-wrap">
+                <i class="fa-solid fa-user-pen" aria-hidden="true"></i>
                 <select id="authorFilter" aria-label="Filter by Author">
                     <option value="all">All Authors</option>
                 </select>
             </div>
-
-            <div class="filter-box">
-                <i class="fa-solid fa-layer-group filter-icon" aria-hidden="true"></i>
+            <div class="select-wrap">
+                <i class="fa-solid fa-layer-group" aria-hidden="true"></i>
                 <select id="genreFilter" aria-label="Filter by Genre">
                     <option value="all">All Genres</option>
                 </select>
             </div>
         </section>
 
-        <main class="books-grid" id="booksGrid" aria-live="polite"></main>
+        <!-- Stats bar -->
+        <div class="stats-bar" id="statsBar" aria-live="polite">
+            <span class="stat-pill"><i class="fa-solid fa-books"></i> <span id="totalBooksCount">0</span> Total Books</span>
+            <span class="stat-pill" id="showingPill"><i class="fa-solid fa-eye"></i> Showing <span id="showingCount">0</span></span>
+        </div>
 
-        <nav class="pagination" id="pagination" aria-label="Pagination"></nav>
+        <!-- Books grid -->
+        <main class="books-grid" id="booksGrid" aria-live="polite" aria-label="Book collection"></main>
+
+        <!-- Pagination -->
+        <nav class="pagination" id="pagination" aria-label="Page navigation"></nav>
     </div>
 
-    <footer class="footer">
-        <div class="footer-content">
-            <i class="fa-solid fa-layer-group"></i> Total Enlisted Books: 
-            <span id="totalBooksCount" style="font-weight: 600; color: var(--gold);">0</span>
-        </div>
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <p>Made with <i class="fa-solid fa-heart" style="color:var(--gold)"></i> for Raisa &amp; Sara</p>
     </footer>
 
-    <div class="modal" id="bookModal" role="dialog" aria-modal="true">
+    <!-- Book Detail Modal -->
+    <div class="modal" id="bookModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-backdrop"></div>
         <div class="modal-content">
-            <button class="close-btn" id="closeBtn" aria-label="Close modal">
+            <button class="modal-close" id="closeBtn" aria-label="Close modal">
                 <i class="fa-solid fa-xmark"></i>
             </button>
             <div class="modal-body">
-                <div class="modal-image-container">
-                    <img id="modalImage" src="" alt="Book Cover Image">
+                <div class="modal-cover-side">
+                    <div class="modal-cover-wrap">
+                        <img id="modalImage" src="" alt="Book Cover">
+                        <div class="modal-cover-glow" id="modalCoverGlow"></div>
+                    </div>
                 </div>
-                <div class="modal-details">
-                    <h2 id="modalTitle">Book Title</h2>
-                    <h3 id="modalAuthor" class="author-name">
+                <div class="modal-info-side">
+                    <span class="modal-badge" id="modalBadge">#1</span>
+                    <h2 id="modalTitle" class="modal-book-title">Book Title</h2>
+                    <h3 id="modalAuthor" class="modal-author">
                         <i class="fa-solid fa-pen-nib"></i> Author Name
                     </h3>
-                    <div class="info-group" style="margin-top: 25px; line-height: 1.8;">
-                        <p>
-                            <strong style="color: var(--gold);">
-                                <i class="fa-solid fa-calendar-days"></i> Purchase Date:
-                            </strong> 
-                            <span id="modalDate" style="color: var(--text-dim);"></span>
-                        </p>
-                        <p style="margin-top: 15px;">
-                            <strong style="color: var(--gold);">
-                                <i class="fa-solid fa-bullseye"></i> Purpose:
-                            </strong> 
-                            <span id="modalPurpose" style="color: var(--text-dim); display: block; margin-top: 5px;"></span>
-                        </p>
+                    <div class="modal-divider"></div>
+                    <div class="modal-meta">
+                        <div class="meta-item">
+                            <span class="meta-label"><i class="fa-solid fa-calendar-days"></i> Purchase Date</span>
+                            <span class="meta-value" id="modalDate">—</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label"><i class="fa-solid fa-bullseye"></i> Purpose</span>
+                            <span class="meta-value" id="modalPurpose">—</span>
+                        </div>
+                        <div class="meta-item" id="modalGenreWrap">
+                            <span class="meta-label"><i class="fa-solid fa-layer-group"></i> Genre</span>
+                            <span class="meta-value" id="modalGenre">—</span>
+                        </div>
                     </div>
+                    <button class="modal-fav-btn" id="modalFavBtn" aria-label="Toggle favourite">
+                        <i class="fa-regular fa-heart"></i> Add to Favourites
+                    </button>
                 </div>
             </div>
         </div>
     </div>
+
 </body>
 </html>
