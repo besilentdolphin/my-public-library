@@ -745,5 +745,752 @@
         "purpose": "Story Reading",
         "genre": "Liberation War",
         "image": "images/rashed.jpg"
+    },
+    {
+        "collectionNumber": 84,
+        "title": "ফিনিক্স",
+        "author": "Muhammed Zafar Iqbal",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Science Fiction",
+        "image": "images/phoenix.jpg"
+    },
+    {
+        "collectionNumber": 85,
+        "title": "ত্রিনিত্রি রাশিমালা",
+        "author": "Muhammed Zafar Iqbal",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Science Fiction",
+        "image": "images/trinitri-rashimala.jpg"
+    },
+    {
+        "collectionNumber": 86,
+        "title": "ক্রেনিয়াল",
+        "author": "Muhammed Zafar Iqbal",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Science Fiction",
+        "image": "images/cranial.jpg"
+    },
+    {
+        "collectionNumber": 87,
+        "title": "ট্রাইটন একটি গ্রহের নাম",
+        "author": "Muhammed Zafar Iqbal",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Science Fiction",
+        "image": "images/triton-ekti-groher-nam.jpg"
+    },
+    {
+        "collectionNumber": 88,
+        "title": "রুহান রুহান",
+        "author": "Muhammed Zafar Iqbal",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Science Fiction",
+        "image": "images/ruhan-ruhan.jpg"
+    },
+    {
+        "collectionNumber": 89,
+        "title": "রাতুলের রাত রাতুলের দিন",
+        "author": "Muhammed Zafar Iqbal",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Science Fiction",
+        "image": "images/ratuler-rat-ratuler-din.jpg"
+    },
+    {
+        "collectionNumber": 90,
+        "title": "রাজু ও আগুনালির ভূত",
+        "author": "Muhammed Zafar Iqbal",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Children's Fiction",
+        "image": "images/raju-o-agunalir-bhut.jpg"
+    },
+    {
+        "collectionNumber": 91,
+        "title": "বেজি",
+        "author": "Muhammed Zafar Iqbal",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Science Fiction",
+        "image": "images/beji.jpg"
+    },
+    {
+        "collectionNumber": 92,
+        "title": "অক্টোপাসের চোখ",
+        "author": "Muhammed Zafar Iqbal",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Science Fiction",
+        "image": "images/octopuser-chokh.jpg"
+    },
+    {
+        "collectionNumber": 93,
+        "title": "মেকু কাহিনী",
+        "author": "Muhammed Zafar Iqbal",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Children's Fiction",
+        "image": "images/meku-kahini.jpg"
+    },
+    {
+        "collectionNumber": 94,
+        "title": "লাবু এলো শহরে",
+        "author": "Muhammed Zafar Iqbal",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Teen Fiction",
+        "image": "images/labu-elo-shohore.jpg"
+    },
+    {
+        "collectionNumber": 95,
+        "title": "নাট বলটু",
+        "author": "Muhammed Zafar Iqbal",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Teen Fiction",
+        "image": "images/nat-boltu.jpg"
+    },
+    {
+        "collectionNumber": 96,
+        "title": "বৃষ্টির ঠিকানা",
+        "author": "Muhammed Zafar Iqbal",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Teen Fiction",
+        "image": "images/brishtir-thikana.jpg"
+    },
+    {
+        "collectionNumber": 97,
+        "title": "ছায়াপথে দুঃস্বপ্ন",
+        "author": "Rakib Hasan",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Science Fiction",
+        "image": "images/chayapothe-dushshopno.jpg"
+    },
+    {
+        "collectionNumber": 98,
+        "title": "শুঁটকি বনাম কিশোর মুসা রবিন",
+        "author": "Rakib Hasan",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Teen Detective",
+        "image": "images/shutki-bonam-kishor-musa-robin.jpg"
+    },
+    {
+        "collectionNumber": 99,
+        "title": "মহাকাশে মহাত্রাস",
+        "author": "Muhammed Zafar Iqbal",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Science Fiction",
+        "image": "images/mohakashe-mohatrash.jpg"
+    },
+    {
+        "collectionNumber": 100,
+        "title": "ইলেকট্রনিক আতঙ্ক",
+        "author": "Rakib Hasan",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Teen Detective",
+        "image": "images/electronic-atonko.jpg"
+    },
+    {
+        "collectionNumber": 101,
+        "title": "জাদুঘর রহস্য",
+        "author": "Rakib Hasan",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Teen Detective",
+        "image": "images/jadughor-rohossho.jpg"
+    },
+    {
+        "collectionNumber": 102,
+        "title": "ত্রাতুলের জগত",
+        "author": "Muhammed Zafar Iqbal",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Science Fiction",
+        "image": "images/tratuler-jogot.jpg"
+    },
+    {
+        "collectionNumber": 103,
+        "title": "বোকা গোয়েন্দা",
+        "author": "Rakib Hasan",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Teen Detective",
+        "image": "images/boka-goyenda.jpg"
+    },
+    {
+        "collectionNumber": 104,
+        "title": "শেয়ালের বিচার",
+        "author": "Upendrakishore Ray Chowdhury",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Children's Fiction",
+        "image": "images/sheyaler-bichar.jpg"
+    },
+    {
+        "collectionNumber": 105,
+        "title": "কঙ্কাল ঘর",
+        "author": "Rakib Hasan",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Teen Detective",
+        "image": "images/kongkal-ghor.jpg"
+    },
+    {
+        "collectionNumber": 106,
+        "title": "ভূতেরা বাড়িতে নেই",
+        "author": "Ahsan Habib",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Horror",
+        "image": "images/vutera-barite-nei.jpg"
+    },
+    {
+        "collectionNumber": 107,
+        "title": "কৃষ্ণগহ্বর, শিশু মহাবিশ্ব ও অন্যান্য রচনা",
+        "author": "Stephen Hawking",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Science",
+        "image": "images/krishnogohobbor.jpg"
+    },
+    {
+        "collectionNumber": 108,
+        "title": "বিজ্ঞানী অনিক লুম্বা",
+        "author": "Muhammed Zafar Iqbal",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Science Fiction",
+        "image": "images/biggani-onik-lumba.jpg"
+    },
+    {
+        "collectionNumber": 109,
+        "title": "A Bookseller at the End of the World",
+        "author": "Ruth Shaw",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Memoir",
+        "image": "images/a-bookseller-at-the-end-of-the-world.jpg"
+    },
+    {
+        "collectionNumber": 110,
+        "title": "The Gaze",
+        "author": "Elif Shafak",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Fiction",
+        "image": "images/the-gaze.jpg"
+    },
+    {
+        "collectionNumber": 111,
+        "title": "The Republic",
+        "author": "Plato",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Philosophy",
+        "image": "images/the-republic.jpg"
+    },
+    {
+        "collectionNumber": 112,
+        "title": "A Little Life",
+        "author": "Hanya Yanagihara",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Fiction",
+        "image": "images/a-little-life.jpg"
+    },
+    {
+        "collectionNumber": 113,
+        "title": "The Da Vinci Code",
+        "author": "Dan Brown",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Thriller",
+        "image": "images/the-da-vinci-code.jpg"
+    },
+    {
+        "collectionNumber": 114,
+        "title": "Crime and Punishment",
+        "author": "Fyodor Dostoevsky",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Classic Fiction",
+        "image": "images/crime-and-punishment.jpg"
+    },
+    {
+        "collectionNumber": 115,
+        "title": "The Brothers Karamazov",
+        "author": "Fyodor Dostoevsky",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Classic Fiction",
+        "image": "images/the-brothers-karamazov.jpg"
+    },
+    {
+        "collectionNumber": 116,
+        "title": "আমাদের সময়কার নায়ক",
+        "author": "Mikhail Lermontov",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Classic Fiction",
+        "image": "images/amader-shomoykar-nayok.jpg"
+    },
+    {
+        "collectionNumber": 117,
+        "title": "অ্যারাউন্ড দ্য ওয়ার্ল্ড ইন এইট্টি ডেইজ",
+        "author": "Jules Verne",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Adventure",
+        "image": "images/around-the-world-in-80-days.jpg"
+    },
+    {
+        "collectionNumber": 118,
+        "title": "ছোটদের ঠাকুরমার ঝুলি",
+        "author": "Dakshinaranjan Mitra Majumder",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Fairy Tale",
+        "image": "images/chotoder-thakurmar-jhuli.jpg"
+    },
+    {
+        "collectionNumber": 119,
+        "title": "ছোটদের ঈশপের গল্প",
+        "author": "Aesop",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Fable",
+        "image": "images/chotoder-eshoper-golpo.jpg"
+    },
+    {
+        "collectionNumber": 120,
+        "title": "রবিনসন ক্রুসো",
+        "author": "Daniel Defoe",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Adventure",
+        "image": "images/robinson-crusoe.jpg"
+    },
+    {
+        "collectionNumber": 121,
+        "title": "অন্য জীবন",
+        "author": "Humayun Ahmed",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Horror",
+        "image": "images/onno-jibon.jpg"
+    },
+    {
+        "collectionNumber": 122,
+        "title": "ভয় ও বিস্ময়",
+        "author": "TBD",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Mystery/Horror",
+        "image": "images/bhoy-o-bishshoy.jpg"
+    },
+    {
+        "collectionNumber": 123,
+        "title": "জীববিজ্ঞানের যত জিজ্ঞাসা ১",
+        "author": "TBD",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Science",
+        "image": "images/jibbigganer-joto-jiggasha-1.jpg"
+    },
+    {
+        "collectionNumber": 124,
+        "title": "লাল নীল দীপাবলি",
+        "author": "Humayun Azad",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "History",
+        "image": "images/lal-nil-dipaboli.jpg"
+    },
+    {
+        "collectionNumber": 125,
+        "title": "ইতিহাসের স্বপ্নভঙ্গ",
+        "author": "TBD",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "History",
+        "image": "images/itihasher-shopnobhongo.jpg"
+    },
+    {
+        "collectionNumber": 126,
+        "title": "চার্লি চ্যাপলিন",
+        "author": "TBD",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Biography",
+        "image": "images/charlie-chaplin.jpg"
+    },
+    {
+        "collectionNumber": 127,
+        "title": "মেমসাহেব",
+        "author": "Nimai Bhattacharya",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Novel",
+        "image": "images/memsaheb.jpg"
+    },
+    {
+        "collectionNumber": 128,
+        "title": "Warmth",
+        "author": "Rithvik Singh",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Poetry",
+        "image": "images/warmth.jpg"
+    },
+    {
+        "collectionNumber": 129,
+        "title": "Hamlet",
+        "author": "William Shakespeare",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Tragedy",
+        "image": "images/hamlet.jpg"
+    },
+    {
+        "collectionNumber": 130,
+        "title": "নেমেসিস",
+        "author": "Mohammad Nazim Uddin",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Thriller",
+        "image": "images/nemesis.jpg"
+    },
+    {
+        "collectionNumber": 131,
+        "title": "কৃষ্ণকুমারী",
+        "author": "Michael Madhusudan Dutt",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Play",
+        "image": "images/krishnokumari.jpg"
+    },
+    {
+        "collectionNumber": 132,
+        "title": "কপালকুণ্ডলা",
+        "author": "Bankim Chandra Chattopadhyay",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Historical Fiction",
+        "image": "images/kopalkundola.jpg"
+    },
+    {
+        "collectionNumber": 133,
+        "title": "শাপমোচন",
+        "author": "Falguni Mukhopadhyay",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Romantic Fiction",
+        "image": "images/shapmochan-2.jpg"
+    },
+    {
+        "collectionNumber": 134,
+        "title": "চাঁদের অমাবস্যা",
+        "author": "Syed Waliullah",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Novel",
+        "image": "images/chander-omaboshsha.jpg"
+    },
+    {
+        "collectionNumber": 135,
+        "title": "রজনী",
+        "author": "Bankim Chandra Chattopadhyay",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Novel",
+        "image": "images/rojoni.jpg"
+    },
+    {
+        "collectionNumber": 136,
+        "title": "আরণ্যক",
+        "author": "Bibhutibhushan Bandyopadhyay",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Novel",
+        "image": "images/aronnok.jpg"
+    },
+    {
+        "collectionNumber": 137,
+        "title": "বিষবৃক্ষ",
+        "author": "Bankim Chandra Chattopadhyay",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Novel",
+        "image": "images/bishbrikkho.jpg"
+    },
+    {
+        "collectionNumber": 138,
+        "title": "দুর্গেশনন্দিনী",
+        "author": "Bankim Chandra Chattopadhyay",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Historical Fiction",
+        "image": "images/durgeshnondini.jpg"
+    },
+    {
+        "collectionNumber": 139,
+        "title": "চিতা বহ্নিমান",
+        "author": "Falguni Mukhopadhyay",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Novel",
+        "image": "images/chita-bohniman.jpg"
+    },
+    {
+        "collectionNumber": 140,
+        "title": "নীল দর্পণ",
+        "author": "Dinabandhu Mitra",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Play",
+        "image": "images/nil-dorpon.jpg"
+    },
+    {
+        "collectionNumber": 141,
+        "title": "বড়দিদি ও মেজদিদি",
+        "author": "Sarat Chandra Chattopadhyay",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Novel",
+        "image": "images/borodidi-o-mejdidi.jpg"
+    },
+    {
+        "collectionNumber": 142,
+        "title": "বিরাজ বৌ",
+        "author": "Sarat Chandra Chattopadhyay",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Novel",
+        "image": "images/biraj-bou.jpg"
+    },
+    {
+        "collectionNumber": 143,
+        "title": "শুভদা",
+        "author": "Sarat Chandra Chattopadhyay",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Novel",
+        "image": "images/shubhoda.jpg"
+    },
+    {
+        "collectionNumber": 144,
+        "title": "বামুনের মেয়ে",
+        "author": "Sarat Chandra Chattopadhyay",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Novel",
+        "image": "images/bamuner-meye.jpg"
+    },
+    {
+        "collectionNumber": 145,
+        "title": "বিপ্রদাস",
+        "author": "Sarat Chandra Chattopadhyay",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Novel",
+        "image": "images/biprodash.jpg"
+    },
+    {
+        "collectionNumber": 146,
+        "title": "পণ্ডিত মশাই",
+        "author": "Sarat Chandra Chattopadhyay",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Novel",
+        "image": "images/pondit-moshai.jpg"
+    },
+    {
+        "collectionNumber": 147,
+        "title": "দত্তা",
+        "author": "Sarat Chandra Chattopadhyay",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Novel",
+        "image": "images/dotta.jpg"
+    },
+    {
+        "collectionNumber": 148,
+        "title": "দেবী চৌধুরাণী",
+        "author": "Bankim Chandra Chattopadhyay",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Historical Fiction",
+        "image": "images/debi-choudhurani.jpg"
+    },
+    {
+        "collectionNumber": 149,
+        "title": "পল্লীসমাজ",
+        "author": "Sarat Chandra Chattopadhyay",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Novel",
+        "image": "images/pollishomaj.jpg"
+    },
+    {
+        "collectionNumber": 150,
+        "title": "নব-বিধান",
+        "author": "Sarat Chandra Chattopadhyay",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Novel",
+        "image": "images/nobobidhan.jpg"
+    },
+    {
+        "collectionNumber": 151,
+        "title": "দেবদাস",
+        "author": "Sarat Chandra Chattopadhyay",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Novel",
+        "image": "images/debadosh.jpg"
+    },
+    {
+        "collectionNumber": 152,
+        "title": "বিন্দুর ছেলে ও রামের সুমতি",
+        "author": "Sarat Chandra Chattopadhyay",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Novel",
+        "image": "images/bindur-chele-o-ramer-shumoti.jpg"
+    },
+    {
+        "collectionNumber": 153,
+        "title": "চে গুয়েভারার ডায়েরি",
+        "author": "Che Guevara",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Memoir",
+        "image": "images/che-guevarar-diary.jpg"
+    },
+    {
+        "collectionNumber": 154,
+        "title": "ইন্দ্রবালা ভাতের হোটেল",
+        "author": "Kallol Lahiri",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Novel",
+        "image": "images/indrobala-vhater-hotel.jpg"
+    },
+    {
+        "collectionNumber": 155,
+        "title": "পথের পাঁচালী",
+        "author": "Bibhutibhushan Bandyopadhyay",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Novel",
+        "image": "images/pother-pachali.jpg"
+    },
+    {
+        "collectionNumber": 156,
+        "title": "পদ্মানদীর মাঝি",
+        "author": "Manik Bandyopadhyay",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Novel",
+        "image": "images/podmanodir-majhi.jpg"
+    },
+    {
+        "collectionNumber": 157,
+        "title": "আদর্শ হিন্দু হোটেল",
+        "author": "Bibhutibhushan Bandyopadhyay",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Novel",
+        "image": "images/adorsho-hindu-hotel.jpg"
+    },
+    {
+        "collectionNumber": 158,
+        "title": "জননী",
+        "author": "Manik Bandyopadhyay",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Novel",
+        "image": "images/jononi.jpg"
+    },
+    {
+        "collectionNumber": 159,
+        "title": "চাঁদের পাহাড়",
+        "author": "Bibhutibhushan Bandyopadhyay",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Adventure",
+        "image": "images/chander-pahar.jpg"
+    },
+    {
+        "collectionNumber": 160,
+        "title": "দুই বোন",
+        "author": "Rabindranath Tagore",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Novel",
+        "image": "images/dui-bon.jpg"
+    },
+    {
+        "collectionNumber": 161,
+        "title": "চিত্রা",
+        "author": "Rabindranath Tagore",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Poetry",
+        "image": "images/chitra.jpg"
+    },
+    {
+        "collectionNumber": 162,
+        "title": "শবনম",
+        "author": "Syed Mujtaba Ali",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Novel",
+        "image": "images/shobnom.jpg"
+    },
+    {
+        "collectionNumber": 163,
+        "title": "দিনগুলি মোর",
+        "author": "Rudraprasad Chakraborty",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Memoir",
+        "image": "images/dinguli-mor.jpg"
+    },
+    {
+        "collectionNumber": 164,
+        "title": "হাজারদুয়ারী",
+        "author": "Buddhadeb Guha",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Novel",
+        "image": "images/hajarduyari.jpg"
+    },
+    {
+        "collectionNumber": 165,
+        "title": "অমৃতের পুত্র-কন্যা",
+        "author": "Sunil Gangopadhyay",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Novel",
+        "image": "images/omriter-putro-konna.jpg"
+    },
+    {
+        "collectionNumber": 166,
+        "title": "রহস্যময় ব্ল্যাক হোল",
+        "author": "Muhammed Zafar Iqbal",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Science",
+        "image": "images/rohosshomoy-black-hole.jpg"
     }
 ]
