@@ -1492,5 +1492,503 @@
         "purpose": "Story Reading",
         "genre": "Science",
         "image": "images/rohosshomoy-black-hole.jpg"
+    },
+    
+    {
+        "collectionNumber": 167,
+        "title": "Love For Imperfect Things",
+        "author": "Haemin Sunim",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Self-help",
+        "image": "images/love-for-imperfect-things.jpg"
+    },
+    {
+        "collectionNumber": 168,
+        "title": "To Kill a Mockingbird",
+        "author": "Harper Lee",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Classic Fiction",
+        "image": "images/to-kill-a-mockingbird.jpg"
+    },
+    {
+        "collectionNumber": 169,
+        "title": "The Power of Geography",
+        "author": "Tim Marshall",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Geopolitics",
+        "image": "images/the-power-of-geography.jpg"
+    },
+    {
+        "collectionNumber": 170,
+        "title": "The Future of Geography",
+        "author": "Tim Marshall",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Geopolitics",
+        "image": "images/the-future-of-geography.jpg"
+    },
+    {
+        "collectionNumber": 171,
+        "title": "The Prisoners of Geography",
+        "author": "Tim Marshall",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Geopolitics",
+        "image": "images/the-prisoners-of-geography.jpg"
+    },
+    {
+        "collectionNumber": 172,
+        "title": "The Art of Thinking Clearly",
+        "author": "Rolf Dobelli",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Psychology",
+        "image": "images/the-art-of-thinking-clearly.jpg"
+    },
+    {
+        "collectionNumber": 173,
+        "title": "The Forty Rules of Love",
+        "author": "Elif Shafak",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Historical Fiction",
+        "image": "images/the-forty-rules-of-love.jpg"
+    },
+    {
+        "collectionNumber": 174,
+        "title": "The Bastard of Istanbul",
+        "author": "Elif Shafak",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Fiction",
+        "image": "images/the-bastard-of-istanbul.jpg"
+    },
+    {
+        "collectionNumber": 175,
+        "title": "The Island of Missing Trees",
+        "author": "Elif Shafak",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Historical Fiction",
+        "image": "images/the-island-of-missing-trees.jpg"
+    },
+    
+    {
+        "collectionNumber": 176,
+        "title": "The Architect's Apprentice",
+        "author": "Elif Shafak",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Historical Fiction",
+        "image": "images/the-architects-apprentice.jpg"
+    },
+    {
+        "collectionNumber": 177,
+        "title": "Wings of Fire",
+        "author": "A. P. J. Abdul Kalam",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Autobiography",
+        "image": "images/wings-of-fire.jpg"
+    },
+    {
+        "collectionNumber": 178,
+        "title": "You've Reached Sam",
+        "author": "Dustin Thao",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Young Adult Romance",
+        "image": "images/youve-reached-sam.jpg"
+    },
+    {
+        "collectionNumber": 179,
+        "title": "The Art of War",
+        "author": "Sun Tzu",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Philosophy",
+        "image": "images/the-art-of-war.jpg"
+    },
+    {
+        "collectionNumber": 180,
+        "title": "The Kite Runner",
+        "author": "Khaled Hosseini",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Historical Fiction",
+        "image": "images/the-kite-runner.jpg"
+    },
+    {
+        "collectionNumber": 181,
+        "title": "The God of Small Things",
+        "author": "Arundhati Roy",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Fiction",
+        "image": "images/the-god-of-small-things.jpg"
+    },
+    {
+        "collectionNumber": 182,
+        "title": "Shatter Me (1)",
+        "author": "Tahereh Mafi",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Dystopian",
+        "image": "images/shatter-me-1.jpg"
+    },
+    {
+        "collectionNumber": 183,
+        "title": "Unravel Me",
+        "author": "Tahereh Mafi",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Dystopian",
+        "image": "images/unravel-me.jpg"
+    },
+    {
+        "collectionNumber": 184,
+        "title": "Letters to Milena",
+        "author": "Franz Kafka",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Autobiography",
+        "image": "images/letters-to-milena.jpg"
+    },
+    {
+        "collectionNumber": 185,
+        "title": "Meditations",
+        "author": "Marcus Aurelius",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Philosophy",
+        "image": "images/meditations.jpg"
+    },
+    {
+        "collectionNumber": 186,
+        "title": "As Long As The Lemon Trees Grow",
+        "author": "Zoulfa Katouh",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Historical Fiction",
+        "image": "images/as-long-as-the-lemon-trees-grow.jpg"
+    },
+    {
+        "collectionNumber": 187,
+        "title": "I hope this doesn't find you",
+        "author": "Ann Liang",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Young Adult Romance",
+        "image": "images/i-hope-this-doesnt-find-you.jpg"
+    },
+    {
+        "collectionNumber": 188,
+        "title": "too good to be true",
+        "author": "Prajakta Koli",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Romance",
+        "image": "images/too-good-to-be-true.jpg"
+    },
+    {
+        "collectionNumber": 189,
+        "title": "Wuthering Heights",
+        "author": "Emily Brontë",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Classic Fiction",
+        "image": "images/wuthering-heights.jpg"
+    },
+    {
+        "collectionNumber": 190,
+        "title": "The Metamorphosis and Other Stories",
+        "author": "Franz Kafka",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Classic Fiction",
+        "image": "images/the-metamorphosis-and-other-stories.jpg"
+    },
+    {
+        "collectionNumber": 191,
+        "title": "Never Thought I'd End Up Here",
+        "author": "Ann Liang",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Young Adult",
+        "image": "images/never-thought-id-end-up-here.jpg"
+    },
+    {
+        "collectionNumber": 192,
+        "title": "Never Lie",
+        "author": "Freida McFadden",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Psychological Thriller",
+        "image": "images/never-lie.jpg"
+    },
+    {
+        "collectionNumber": 193,
+        "title": "The Miracle Morning",
+        "author": "Hal Elrod",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Self-help",
+        "image": "images/the-miracle-morning.jpg"
+    },
+    {
+        "collectionNumber": 194,
+        "title": "Man's Search For Meaning",
+        "author": "Viktor E. Frankl",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Psychology",
+        "image": "images/mans-search-for-meaning.jpg"
+    },
+    {
+        "collectionNumber": 195,
+        "title": "Haunting Adeline (2)",
+        "author": "H.D. Carlton",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Dark Romance",
+        "image": "images/haunting-adeline-2.jpg"
+    },
+    {
+        "collectionNumber": 196,
+        "title": "Haunting Adeline (1)",
+        "author": "H.D. Carlton",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Dark Romance",
+        "image": "images/haunting-adeline-1.jpg"
+    },
+    {
+        "collectionNumber": 197,
+        "title": "Final Offer (3)",
+        "author": "Lauren Asher",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Romance",
+        "image": "images/final-offer-3.jpg"
+    },
+    {
+        "collectionNumber": 198,
+        "title": "Terms and Conditions (2)",
+        "author": "Lauren Asher",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Romance",
+        "image": "images/terms-and-conditions-2.jpg"
+    },
+    {
+        "collectionNumber": 199,
+        "title": "The Fine Print (1)",
+        "author": "Lauren Asher",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Romance",
+        "image": "images/the-fine-print-1.jpg"
+    },
+    {
+        "collectionNumber": 200,
+        "title": "King of Envy (5)",
+        "author": "Ana Huang",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Romance",
+        "image": "images/king-of-envy-5.jpg"
+    },
+    {
+        "collectionNumber": 201,
+        "title": "King of Sloth (4)",
+        "author": "Ana Huang",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Romance",
+        "image": "images/king-of-sloth-4.jpg"
+    },
+    {
+        "collectionNumber": 202,
+        "title": "King of Greed (3)",
+        "author": "Ana Huang",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Romance",
+        "image": "images/king-of-greed-3.jpg"
+    },
+    {
+        "collectionNumber": 203,
+        "title": "King of Pride (2)",
+        "author": "Ana Huang",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Romance",
+        "image": "images/king-of-pride-2.jpg"
+    },
+    {
+        "collectionNumber": 204,
+        "title": "King of Wrath (1)",
+        "author": "Ana Huang",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Romance",
+        "image": "images/king-of-wrath-1.jpg"
+    },
+    {
+        "collectionNumber": 205,
+        "title": "Twisted Games (2)",
+        "author": "Ana Huang",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Romance",
+        "image": "images/twisted-games-2.jpg"
+    },
+    {
+        "collectionNumber": 206,
+        "title": "Twisted Love (1)",
+        "author": "Ana Huang",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Romance",
+        "image": "images/twisted-love-1.jpg"
+    },
+    {
+        "collectionNumber": 207,
+        "title": "Twisted Lies (4)",
+        "author": "Ana Huang",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Romance",
+        "image": "images/twisted-lies-4.jpg"
+    },
+    {
+        "collectionNumber": 208,
+        "title": "Twisted Hate (3)",
+        "author": "Ana Huang",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Romance",
+        "image": "images/twisted-hate-3.jpg"
+    },
+    {
+        "collectionNumber": 209,
+        "title": "Before we forget kindness",
+        "author": "Toshikazu Kawaguchi",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Magical Realism",
+        "image": "images/before-we-forget-kindness.jpg"
+    },
+    {
+        "collectionNumber": 210,
+        "title": "Tales from the cafe",
+        "author": "Toshikazu Kawaguchi",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Magical Realism",
+        "image": "images/tales-from-the-cafe.jpg"
+    },
+    {
+        "collectionNumber": 211,
+        "title": "Before the coffee gets cold",
+        "author": "Toshikazu Kawaguchi",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Magical Realism",
+        "image": "images/before-the-coffee-gets-cold.jpg"
+    },
+    {
+        "collectionNumber": 212,
+        "title": "Before your memory fades",
+        "author": "Toshikazu Kawaguchi",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Magical Realism",
+        "image": "images/before-your-memory-fades.jpg"
+    },
+    {
+        "collectionNumber": 213,
+        "title": "Before we say goodbye",
+        "author": "Toshikazu Kawaguchi",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Magical Realism",
+        "image": "images/before-we-say-goodbye.jpg"
+    },
+    {
+        "collectionNumber": 214,
+        "title": "It Starts With Us",
+        "author": "Colleen Hoover",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Romance",
+        "image": "images/it-starts-with-us.jpg"
+    },
+    {
+        "collectionNumber": 215,
+        "title": "It Ends With Us",
+        "author": "Colleen Hoover",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Romance",
+        "image": "images/it-ends-with-us.jpg"
+    },
+    {
+        "collectionNumber": 216,
+        "title": "Confess",
+        "author": "Colleen Hoover",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Romance",
+        "image": "images/confess.jpg"
+    },
+    {
+        "collectionNumber": 217,
+        "title": "Ugly Love",
+        "author": "Colleen Hoover",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Romance",
+        "image": "images/ugly-love.jpg"
+    },
+    {
+        "collectionNumber": 218,
+        "title": "The Old Man and the Sea",
+        "author": "Ernest Hemingway",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Classic Fiction",
+        "image": "images/the-old-man-and-the-sea.jpg"
+    },
+    {
+        "collectionNumber": 219,
+        "title": "The Cruel Prince (1)",
+        "author": "Holly Black",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Fantasy",
+        "image": "images/the-cruel-prince-1.jpg"
+    },
+    {
+        "collectionNumber": 220,
+        "title": "The Wicked King (2)",
+        "author": "Holly Black",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Fantasy",
+        "image": "images/the-wicked-king-2.jpg"
+    },
+    {
+        "collectionNumber": 221,
+        "title": "The Queen of Nothing (3)",
+        "author": "Holly Black",
+        "purchaseDate": "TBD",
+        "purpose": "Story Reading",
+        "genre": "Fantasy",
+        "image": "images/the-queen-of-nothing-3.jpg"
     }
+
 ]
