@@ -7,7 +7,7 @@ const App = {
         books: [],
         filteredBooks: [],
         currentPage: 1,
-        booksPerPage: 12,
+        booksPerPage: 8,
         themes: ['theme-dark', 'theme-light'],
         currentThemeIndex: 0,
         favorites: JSON.parse(localStorage.getItem('library_favorites') || '[]'),
